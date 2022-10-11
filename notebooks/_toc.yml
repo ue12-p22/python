@@ -1,0 +1,57 @@
+format: jb-book
+root: 0-00-intro
+parts:
+- caption: "un jeu pour commencer"
+  chapters:
+  - file: 1-01-snake
+- caption: "types de base"
+  chapters:
+  - file: 2-01-numbers
+  - file: 2-02-containers-1
+  - file: 2-03-strings
+  - file: 2-04-files
+  - file: 2-05-containers-2
+- caption: "présentation"
+  chapters:
+  - file: 3-11-pep008
+- caption: "itérations"
+  chapters:
+  - file: 4-11-iterations-1
+  - file: 4-12-iterations-2
+- caption: "classes"
+  chapters:
+  - file: 5-11-classes
+  - file: 5-12-dunder-specials
+  - file: 5-13-inheritance
+  - file: 5-14-class-attributes
+- caption: "fonctions"
+  chapters:
+  - file: 6-00-intro
+- caption: "regexps"
+  chapters:
+  - file: 7-10-regexps
+- caption: "générateurs"
+  chapters:
+  - file: 7-20-generators
+- caption: "organisation des sources"
+  chapters:
+  - file: 8-10-import-basics
+  - file: 8-11-imports-sources
+- caption: "divers"
+  chapters:
+  - file: 9-10-argparse
+  - file: 9-11-properties
+  - file: 9-12-decorators
+- caption: "notebooks interactifs"
+  chapters:
+  - glob: a-[a-z]*
+# - caption: "Python asynchrone"
+#   chapters:
+#   - file: b-01-os-basics
+#   - file: b-s1-programmation-asynchrone
+#   - file: b-s1-z1-thread-safety
+#   - file: b-s2-examples
+#   - file: b-s3-ecosysteme
+#   - file: b-s4-async-with-for
+#   - file: b-s6-av-event-loops
+#   - file: b-s7-libraries
