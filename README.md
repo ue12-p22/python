@@ -1,5 +1,5 @@
-# python-advanced
+# python
 
 Module AP - Apprentissage de la Programmation
 
-Cours de programmation en Python
+Cours de programmation avancée en Python

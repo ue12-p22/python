@@ -52,11 +52,11 @@
 #
 # comme toujours dans
 #
-# https://github.com/ue12-p21/python-advanced-solutions
+# https://github.com/ue12-p22/python-solutions
 
 # %% [markdown]
 # ## les supports
 #
 # je vous rappelle aussi que vous avez les supports en ligne ici
 #
-# https://nbhosting.inria.fr/builds/ue12-p21-python-advanced/handouts/latest/
+# https://nbhosting.inria.fr/builds/ue12-p22-python/handouts/latest/

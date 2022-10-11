@@ -50,6 +50,6 @@
 #
 # vous trouverez dans
 #
-# https://github.com/ue12-p21/python-advanced-solutions/blob/main/graphs.py
+# https://github.com/ue12-p22/python-solutions/blob/main/graphs.py
 #
 # les solutions pour le TP sur les parcours de graphe

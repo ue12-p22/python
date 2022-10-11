@@ -83,4 +83,4 @@ index_as_embedded()
 #
 # comme toujours dans
 #
-# https://github.com/ue12-p21/python-advanced-solutions
+# https://github.com/ue12-p22/python-solutions

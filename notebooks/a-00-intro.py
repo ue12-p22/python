@@ -45,7 +45,7 @@
 # ## les supports
 #
 # * pour rappel, vous avez les supports en ligne ici  
-#   https://nbhosting.inria.fr/builds/ue12-p21-python-advanced/handouts/latest/
+#   https://nbhosting.inria.fr/builds/ue12-p22-python/handouts/latest/
 #   et notamment le présent chapitre commence ici
-#   https://nbhosting.inria.fr/builds/ue12-p21-python-advanced/handouts/latest/a-a1-profiling.html
+#   https://nbhosting.inria.fr/builds/ue12-p22-python/handouts/latest/a-a1-profiling.html
 #

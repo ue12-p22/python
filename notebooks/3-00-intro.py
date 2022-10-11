@@ -56,7 +56,7 @@
 #
 # vous trouverez les solutions aux exercices des semaines passées ici
 #
-# https://github.com/ue12-p21/python-advanced-solutions
+# https://github.com/ue12-p22/python-solutions
 #
 # elles sont publiées au fur et à mesure,
 # donc aujourd'hui vous y trouverez les solutions
