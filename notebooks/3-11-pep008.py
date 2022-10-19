@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # ---
 # jupyter:
-#   celltoolbar: Slideshow
 #   jupytext:
 #     cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
 #     notebook_metadata_filter: all, -jupytext.text_representation.jupytext_version,
