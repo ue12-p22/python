@@ -39,7 +39,7 @@
 # %% [markdown]
 # # écrire un petit jeu
 #
-# aujourd'hui pour le premier cours du module "AP: Apprentissage de la Programmation en Python", 
+# aujourd'hui pour le premier cours du module "AP: Apprentissage de la Programmation en Python",
 # nous allons coder un petit jeu (ou plus, pour les aguerris)
 
 # %% [markdown]
@@ -48,7 +48,7 @@
 # ce qu'on veut faire aujourd'hui principalement, c'est :
 #
 # * vérifier les installations de tout le monde
-# * pratiquer en vraie grandeur la boucle 
+# * pratiquer en vraie grandeur la boucle
 #   * écriture de code
 #   * lancement de programme
 #   * debugging éventuellement
@@ -61,7 +61,7 @@
 # * en plus c'est ludique !
 
 # %% [markdown]
-# ### avertissement 
+# ## avertissement
 #
 # il y a dans vs-code une fonction 'terminal intégré' qui peut être pratique  
 # ça évite de basculer sans cesse entre deux applications (vs-code / terminal)
@@ -73,3 +73,8 @@
 #
 # remarquez qu'on peut facilement basculer entre les applications  
 # sans passer par la souris avec la touche `⌘-Tab` (et une clé similaire sur Windows)
+
+# %% [markdown]
+# ## le TP
+#
+# se trouve dans le dossier `notebooks/tps/snake`
