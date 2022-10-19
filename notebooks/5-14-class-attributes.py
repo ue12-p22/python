@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # ---
 # jupyter:
-#   celltoolbar: Slideshow
 #   jupytext:
 #     cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
 #     notebook_metadata_filter: all, -jupytext.text_representation.jupytext_version,
@@ -123,7 +122,7 @@ s1.name, s2.name
 # sujet lié au précédent, mais d'utilisation (beaucoup) plus rare
 
 # %% tags=["level_intermediate"]
-class Student(RecordInstances):
+class Student2:
 
     all_instances = []
 
@@ -140,9 +139,9 @@ class Student(RecordInstances):
 
 
 # %% tags=["level_intermediate"]
-s1 = Student('jean')
+s1 = Student2('jean')
 len(s1.all_instances)
 
 # %% tags=["level_intermediate"]
-s2 = Student('jean')
-len(s1.all_instances), len(Student.all_instances)
+s2 = Student2('jean')
+len(s1.all_instances), len(Student2.all_instances)

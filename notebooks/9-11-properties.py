@@ -11,7 +11,7 @@
 #       extension: .py
 #       format_name: percent
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 #   language_info:
@@ -22,7 +22,7 @@
 #     title: properties
 # ---
 
-# %% [markdown] slideshow={"slide_type": "-"} tags=[]
+# %% [markdown] slideshow={"slide_type": "-"}
 # <div class="licence">
 # <span>Licence CC BY-NC-ND</span>
 # <span>Thierry Parmentelat</span>
@@ -41,7 +41,7 @@
 # %% [markdown]
 # ## propos
 
-# %% [markdown] tags=[]
+# %% [markdown]
 # on a vu qu'en général, une classe expose
 #
 # * des attributs, pour accéder directement aux différents 'morceaux' qui constituent une instance

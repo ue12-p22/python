@@ -42,9 +42,9 @@ parts:
   - file: 9-10-argparse
   - file: 9-11-properties
   - file: 9-12-decorators
-- caption: "notebooks interactifs"
-  chapters:
-  - glob: a-[a-z]*
+# - caption: "notebooks interactifs"
+#   chapters:
+#   - glob: a-[a-z]*
 # - caption: "Python asynchrone"
 #   chapters:
 #   - file: b-01-os-basics

@@ -643,7 +643,7 @@ from itertools import islice
 with Path('islice.txt').open() as f:
     for line in islice(f, 0, None, 2):
         print(line, end="")
-        
+
 
 # %% cell_style="split"
 # ou zapper les 3 premières

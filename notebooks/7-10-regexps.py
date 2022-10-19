@@ -120,7 +120,7 @@ match.end()
 # %% cell_style="center"
 # match répond non car seulement LE DÉBUT de la chaine est essayé
 
-re.match('abzz', 'ababzzz'))
+re.match('abzz', 'ababzzz')
 
 # %% cell_style="center"
 # un use case pour le "walrus operator"
