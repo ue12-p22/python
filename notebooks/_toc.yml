@@ -4,6 +4,7 @@ parts:
 - caption: "un jeu pour commencer"
   chapters:
   - file: 1-01-snake
+  - file: tps/snake/README-snake
 - caption: "types de base"
   chapters:
   - file: 2-01-numbers

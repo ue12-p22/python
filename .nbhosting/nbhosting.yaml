@@ -8,8 +8,7 @@ tracks:
   - name: '1/9: jeux'
     notebooks:
     - notebooks/1-01-snake.py
-    - tps/games/README-snake.md
-    - tps/games/README-flappybird.md
+    - notebooks/tps/snake/README-snake.md
   - name: '2/9: types de base'
     notebooks:
     - notebooks/2-00-intro.py
