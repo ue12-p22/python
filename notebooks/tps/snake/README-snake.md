@@ -4,17 +4,23 @@ Le but de ce TP est de réaliser un petit jeu en Python. L'objectif est de vous
 apprendre à concevoir et réaliser un programme complet, et non de réaliser le
 nouveau best-seller.
 
+**avertissement** ce document n'est pas un notebook, on peut le lire avec
+jupyter mais c'est sous-optimal, le mieux est le lire avec vs-code.
+
 ## Objectifs et démarche
 
 Gardez en tête que votre objectif est de réaliser un **programme qui marche** et
-pas un programme parfait.
+pas un programme parfait.  
+Aussi on va commencer par se créer un dossier vierge, et l'initialiser **comme un
+dépôt `git`** (on fait comment déjà ?)
 
-Aussi on va commencer par se créer un dossier vierge, et l'initialiser comme un
-dépôt `git` (on fait comment déjà ?)
+Et ensuite, on va bien faire attention de **committer chaque fois** qu'on aura
+**une version qui marche**  
+c'est-à-dire dans ce TP très guidé, **un commit par
+étape** en gros !
 
-Et ensuite, on va bien faire attention de ***committer chaque fois qu'on aura
-une version qui marche***; c'est-à-dire dans ce TP très guidé, un commit par
-étape en gros !
+Et comme ça quand on aura un bug on pourra se concentrer sur **ce qui a changé**
+depuis la version qui marchait
 
 Mais avant de pouvoir commencer, un peu de préparation...
 
@@ -63,8 +69,9 @@ soyez patient lors du premier lancement, la librairie initialise des tas de chos
 Un premier code très simple est le suivant, écrivez-le dans un fichier
 `snake.py` et lancez-le avec la commande `python` :
 
-**ATTENTION** je vous recommande de **ne pas essayer d'exécuter ce code depuis
-un notebook**, car vous allez rencontrer des problèmes mystérieux de kernel qui
+**ATTENTION** il **ne faut PAS** essayer d'exécuter ce code **depuis
+un notebook**, ça ne fonctionne pas  
+vous allez rencontrer des problèmes mystérieux de kernel qui
 meurt, si vous essayez.
 
 ```python
