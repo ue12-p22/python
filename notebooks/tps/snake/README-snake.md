@@ -161,7 +161,7 @@ depuis vs-code :
 - ouvrir la palette
   * `⇧ ⌘ P` Shift-Command-P (mac)
   * `⇧ ⌃ P` Shift-Control-P (windows)
-- chercher la fonction *Python: Create Terminal*
+- chercher la fonction *Toggle Terminal*
   - mémoriser le raccourci clavier
   - qui est Control-backtick sur Mac (le backtick c'est `)
 
