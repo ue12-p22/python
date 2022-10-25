@@ -4,8 +4,9 @@ Le but de ce TP est de réaliser un petit jeu en Python. L'objectif est de vous
 apprendre à concevoir et réaliser un programme complet, et non de réaliser le
 nouveau best-seller.
 
-**avertissement** ce document n'est pas un notebook, on peut le lire avec
-jupyter mais c'est sous-optimal, le mieux est le lire avec vs-code.
+**avertissement** ce document n'est pas un notebook (et le code ne va pas
+marcher dans un notebook non plus); on peut le lire avec jupyter mais c'est
+sous-optimal, le mieux est le lire avec vs-code, ou en HTML statique.
 
 ## Objectifs et démarche
 
@@ -14,6 +15,12 @@ pas un programme parfait.
 Aussi on va commencer par se créer un dossier vierge, et l'initialiser **comme un
 dépôt `git`** (on fait comment déjà ?)
 
+```bash
+$ mkdir mycode
+$ cd mycode
+$ # et là on crée un dépôt git avec ??
+```
+
 Et ensuite, on va bien faire attention de **committer chaque fois** qu'on aura
 **une version qui marche**  
 c'est-à-dire dans ce TP très guidé, **un commit par
@@ -21,6 +28,10 @@ c'est-à-dire dans ce TP très guidé, **un commit par
 
 Et comme ça quand on aura un bug on pourra se concentrer sur **ce qui a changé**
 depuis la version qui marchait
+
+Enfin si vous créez votre dépôt à l'intérieur d'un autre dépôt (de cours par
+exemple), reportez-vous à la toute dernière section pour comprendre comment `ca
+fonctionne.
 
 Mais avant de pouvoir commencer, un peu de préparation...
 
@@ -63,6 +74,12 @@ Pour tester votre installation, vous pouvez lancer le programme d'exemple comme 
 ```
 
 soyez patient lors du premier lancement, la librairie initialise des tas de choses...
+
+Sachez aussi que vous pouvez aussi voir la version installée d'une librairie avec
+
+```bash
+(snake) pip show snake
+```
 
 ## Code de démarrage (v0)
 
@@ -116,7 +133,7 @@ Vous pouvez désormais exécuter le programme avec:
 (snake) $ python snake.py
 ```
 
-**Attention** : vous verrez que vous ne pouvez pas _fermer_ la fenêtre
+**Attention** : vous verrez que vous ne pouvez **pas _fermer_ la fenêtre**
 normalement, pour quitter votre programme vous devez saisir **CONTROL+C** dans
 le terminal.
 
@@ -322,6 +339,8 @@ Fin de la partie obligatoire
 ***
 ***
 
+# Options
+
 Pour les rapides, je vous invite à aborder les sujets suivants (dans l'ordre qui
 vous inspire le plus):
 
@@ -366,3 +385,22 @@ Modifiez votre code pour pouvoir paramétrer deux fréquences séparément :
 
 * la fréquence de rafraichissement de l'écran (en frame / seconde)
 * la fréquence de déplacement du serpent (en case / seconde)
+
+# Note à propos des dépôts git imbriqués
+
+Si vous avez reçu ce TP depuis un dépôt git (celui de votre cours d'info), ce
+qu'on vous invite à faire c'est finalement de créer un dépôt git ... à
+l'intérieur d'un autre dépôt git.
+
+Sachez que ça marche sans aucun souci (et en pratique on finit par avoir ce
+genre de tricotage avec une profondeur non triviale, 3 voire même parfois 4 dépôts les
+uns dans les autres)
+
+La seule chose à savoir c'est que, lorsque vous tapez une commande `git`, pour
+trouver le "bon" dépôt, on utilise assez naturellement l'algo suivant:
+
+> on regarde si le dossier courant est un dépôt git, si oui on a trouvé, sinon on
+regarde dans le dossier parent, et ainsi de suite
+
+Donc c'est assez simple, mais surtout au tout début,
+faites juste attention à ne pas ajouter vos fichiers dans le mauvais dépôt
