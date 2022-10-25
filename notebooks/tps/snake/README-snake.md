@@ -244,7 +244,7 @@ qui dessine un grille (vous pouvez ben sûr choisir d'autres couleurs):
 ![](media/damier.png)
 
 pour cela, vous pouvez utiliser la méthode
-[`pg.draw.rect()`](http://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
+[`pg.draw.rect()`](https://www.pygame.org/docs/ref/draw.html#pygame.draw.rect)
 qui dessine un rectangle:
 
 ```python
