@@ -452,3 +452,13 @@ regarde dans le dossier parent, et ainsi de suite
 
 Donc c'est assez simple, mais surtout au tout début,
 faites juste attention à ne pas ajouter vos fichiers dans le mauvais dépôt
+
+Dernière astuce pour les *geeks*: si vous voulez savoir où se trouve la racine
+de votre dépôt courant:
+
+```bash
+git config --global alias.root "rev-parse --show-toplevel"
+```
+
+après quoi vous pourrez taper n'importe où `git root` pour voir s'afficher le
+(chemin complet du) dossier racine de votre dépôt.
