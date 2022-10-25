@@ -59,6 +59,9 @@ trouve, il vous faut taper ceci avant de relancer un terminal
 $ conda init bash
 ```
 
+Reportez-vous plus bas pour une liste des commandes qui nous permettent de gérer
+les environnements virtuels conda.
+
 ## Prérequis
 
 Installez ensuite la dernière version du module `pygame` avec `pip`:
@@ -385,6 +388,51 @@ Modifiez votre code pour pouvoir paramétrer deux fréquences séparément :
 
 * la fréquence de rafraichissement de l'écran (en frame / seconde)
 * la fréquence de déplacement du serpent (en case / seconde)
+
+# Notes à propos des environnements virtuels
+
+Voici un très rapide résumé des commandes pour gérer ses environnements virtuels
+
+* pour voir la liste
+
+  ```bash
+  conda env list
+  ```
+
+* pour entrer dans un environnement
+
+  ```bash
+  conda activate snake
+  ```
+
+* pour sortir de l'environnement
+
+  ```bash
+  conda deactivate
+  ```
+
+* pour voir dans quel environnement on se trouve (normalement vous avez ça aussi dans le *prompt*)
+
+  ```bash
+  echo echo $CONDA_DEFAULT_ENV
+  ```
+
+* pour créer un nouvel environnement
+
+  ```bash
+  conda create -n un-nouveau python=3.10
+  ```
+
+  (le fait de spécifier la version de Python est optionnel, mais recommandé)
+
+* pour détruire un environnement
+
+  ```bash
+  conda env remove -n un-nouveau
+  ```
+
+  **remarquez** comment il n'y a pas de `env` pour `create`, mais il en faut un pour `remove` ...
+
 
 # Note à propos des dépôts git imbriqués
 
