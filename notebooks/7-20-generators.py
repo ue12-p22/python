@@ -30,10 +30,12 @@
 # ---
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
+
 
 # %% [markdown] slideshow={"slide_type": ""}
 # # les générateurs
@@ -91,6 +93,7 @@ for square in squares(data):
 # * une expression génératrice retourne un objet de type `generator`
 # * il est fréquent - par abus de langage - d'appeler aussi simplement *générateur*  
 #   une fonction génératrice
+#
 # * mais précisément, c'est **l'appel** à une fonction génératrice  
 #   qui retourne un objet de type `generator`
 #
@@ -292,6 +295,7 @@ for div in divdivs(12):
 # on peut aussi créer des objets qui sont des itérateurs, grâce à ce qu'on appelle le "protocole" itérable
 #
 # dans les prochaines slides, on va construire de plusieurs façons différentes un objet qui a toujours les mêmes propriétés :
+#
 # * `carres_n` est un itérateur
 # * qui est capable d'énumérer les carrés des nombres entiers
 

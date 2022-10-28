@@ -30,11 +30,11 @@
 # ---
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# <span><img src="media/inria-25-alpha.png" /></span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # # les itérations en Python
@@ -53,6 +53,7 @@
 #
 # * **et aussi** de nombreuses techniques  
 #   pour itérer **de manière optimisée**
+#
 #   * compréhensions
 #   * itérateurs
 #   * expressions génératrices
@@ -81,6 +82,7 @@
 # * `break` sort complètement de la boucle
 # * `continue` termine abruptement  
 #   l'itération courante et passe à la suivante
+#
 # * on parle toujours de la boucle **la plus imbriquée**
 #
 
@@ -282,6 +284,7 @@ min(L), sum(L)
 # * qui présentent la particularité de **consommer peu de mémoire**
 # * en fait un objet itérateur capture uniquement  
 #   **la logique de l'itération**, mais pas les données
+#
 # * c'est-à-dire où on en est, et comment passer au suivant
 
 # %% cell_style="split" slideshow={"slide_type": ""}

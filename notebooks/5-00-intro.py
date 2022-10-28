@@ -30,7 +30,14 @@
 # ---
 
 # %% [markdown]
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% [markdown]
 # # Cours 5/9
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown]
 # ## objectifs

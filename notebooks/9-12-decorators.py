@@ -23,14 +23,12 @@
 # ---
 
 # %% [markdown] slideshow={"slide_type": "-"}
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# </div>
-#
-# <style>
-# .smaller {font-size: smaller}
-# </style>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
+
 
 # %% [markdown] slideshow={"slide_type": ""}
 # # décorateurs

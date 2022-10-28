@@ -30,11 +30,11 @@
 # ---
 
 # %% [markdown]
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# <span><img src="media/inria-25-alpha.png" /></span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %%
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown]
 # # les containers (1/2)
@@ -257,6 +257,7 @@ print(L2)
 # * alors qu'on veut juste itérer sur le contenu
 # * dans ce cas, techniques + adaptées :  
 #   itérateurs et autres générateurs
+#
 # * sujet avancé que l’on verra plus tard
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -310,6 +311,7 @@ T1 == T3
 # * ce qui le rend hashable :  
 #   on **peut l'utiliser** dans un **ensemble**  
 #   ou comme clé dans un **dictionnaire**
+#
 # * par contre bien sûr les fonctions faisant des modifications  
 #   *in-place* ne s’appliquent pas aux tuples
 

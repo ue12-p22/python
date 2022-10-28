@@ -30,11 +30,11 @@
 # ---
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# <span><img src="media/inria-25-alpha.png" /></span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown] slideshow={"slide_type": ""}
 # # les itérations - suite
@@ -229,6 +229,7 @@ result
 # * on a une liste d'éléments - beaucoup, genre $10^6$
 # * on veut pouvoir accéder **en temps constant**  
 #   à un élément à partir d'un id
+#
 # * solution: créer un dictionnaire - qu'on appelle un *index*  
 #   (comme dans les bases de données)
 

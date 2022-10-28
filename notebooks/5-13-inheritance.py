@@ -30,14 +30,11 @@
 # ---
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# </div>
-#
-# <style>
-# .smaller {font-size: smaller}
-# </style>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown] slideshow={"slide_type": ""}
 # # POO & héritage
@@ -165,6 +162,7 @@
 # * la variable `a` est identifiée lexicalement  
 #   (variable locale, paramètre de fonction,  
 #    voir par exemple le cas des clôtures)
+#
 # * la variable référence un objet  
 #   et `b` est cherché comme un attribut à partir de cet objet
 
@@ -182,9 +180,11 @@
 
 # %% [markdown] cell_style="center"
 # on distingue deux cas
+#
 # * attribut en écriture  
 #    `obj.attribute = ...`  
 #    (i.e. à gauche d'une affectation)
+#
 # * résolution des attributs en lecture  
 #     `obj.attribute` 
 
@@ -285,6 +285,7 @@ list(vector.__dict__)
 #
 # * avec la fonction *builtin* `dir(x)`, on peut accéder  
 #   à l'ensemble des attributs qui sont disponibles sur `x`
+#
 # * c'est donc la somme des attributs trouvés:
 #   * dans l'espace de nom de `x`
 #   * dans l'espace de nom de sa classe
@@ -306,6 +307,7 @@ list(vector.__dict__)
 # ### conclusion
 #
 # dans ce cas simple de la classe `Vector` et de l'instance `vector`:
+#
 # * `vector.x` fait référence à l'attribut posé **directement sur l'instance**
 # * `vector.length` fait référence à la méthode qui est **dans la classe**
 
@@ -315,6 +317,7 @@ list(vector.__dict__)
 # %% [markdown] slideshow={"slide_type": ""}
 # * jusqu'ici on n'a pas d'héritage  
 #   puisque pour l'instant on n'a qu'une classe
+#
 # * mais l'héritage  
 #   est une **simple prolongation** de cette logique
 
@@ -346,6 +349,7 @@ subvector = SubVector(6, 8)
 # * c'est exactement le même mécanisme qui est à l'oeuvre :
 # * quand on va vouloir appeler `subvector.length()`  
 #   on cherche l'attribut `length` 
+#
 #   * dans l'instance `subvector` : non
 #   * dans sa classe `SubVector` : non
 #   * dans la super-classe `Vector` : ok, on prend ça
@@ -356,11 +360,14 @@ subvector = SubVector(6, 8)
 # %% [markdown] slideshow={"slide_type": ""}
 # * le mécanisme de résolution d'attribut qu'on vient de voir  
 #   ne fonctionne que **pour la lecture des attributs**
+#
 # * quand on **écrit** un attribut dans un objet,  
 #   le mécanisme est beaucoup plus simple:  
 #   on écrit **directement dans l'espace de nom** de l'objet
+#
 # * on considère que c'est une écriture  
 #   si le terme `obj.attribute` est **à gauche** d'une affectation  
+#
 # * typiquement `self.name = name` dans le constructeur
 
 # %% cell_style="split"
@@ -385,6 +392,7 @@ subvector.foo = 12
 # %% [markdown] cell_style="split" tags=["level_intermediate"]
 # * il y a écriture si  
 #   et seulement si il y a **affectation**
+#
 # * dans 1. il y a
 #   * **lecture** de l'attribut `liste`
 #   * même si on modifie l'objet
@@ -430,6 +438,7 @@ subvector.foo = 12
 #   * la sous-classe hérite  
 #     (des attributs)  
 #     de sa (ses) super-classe(s)
+#
 #   * l’instance hérite de la  
 #     classe qui la crée
 
@@ -439,6 +448,7 @@ subvector.foo = 12
 # %% [markdown]
 # * `isinstance(x, class1)` retourne `True` si   
 #   `x` est une instance de `class1` **ou d’une super classe**
+#
 # * `issubclass(class1, class2)` retourne `True` si  
 #   `class1` est une sous-classe de `class2`
 

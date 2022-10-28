@@ -30,11 +30,11 @@
 # ---
 
 # %% [markdown]
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# <span><img src="media/inria-25-alpha.png" /></span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown]
 # # Cours 3/9
@@ -47,6 +47,7 @@
 # * corriger les exos de la semaine dernière
 # * voir la deuxième famille de **containers**, basés sur les **hash-tables**,
 #   i.e. dictionnaires et ensembles
+#
 # * parler un peu de **présentation du code**
 # * faire un gros TP sur quelques algorithmes de base des graphes  
 #   en option on pourra parler un peu de *profiling*

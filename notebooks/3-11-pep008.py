@@ -30,11 +30,12 @@
 # ---
 
 # %% [markdown]
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# <span><img src="media/inria-25-alpha.png" /></span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
+
 
 # %% [markdown]
 # # présentation du code
@@ -123,8 +124,10 @@
 # * dans sa version orthodoxe, la largeur de la page est limitée à 80 caractères
 #   en pratique aujourd'hui on peut être un peu plus souple,   
 #   mais **jamais > 100 caractères de large**
+#
 # * l'idée est de pouvoir juxtaposer plusieurs codes (3 voire 4 )  
 #   dans la largeur d'un écran moderne
+#
 # * on a parfois besoin de recourir à des astuces pour y arriver
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -227,8 +230,10 @@ help(gcd)
 # %% [markdown] slideshow={"slide_type": "slide"}
 # * le docstring est une simple chaine  
 #   qui apparaît en premier
+#
 # * permet de ranger de la documentation 
 #   directement dans l'objet fonction
+#
 # * pas indispensable pour les fonctions internes  
 #   mais nécessaire pour celles qui sont exposées aux utilisateurs
 
@@ -261,8 +266,10 @@ help(gcd2)
 #
 # * ne pas parler le PEP008, c'est un peu  
 #   comme faire plein de fautes d'orthographe
+#
 # * ça n'empêche pas d'avoir de bonnes idées  
 #   mais ça donne mauvaise impression
+#
 # * faites-y attention à partir de maintenant 
 # * fait partie des critères pour l'évaluation
 

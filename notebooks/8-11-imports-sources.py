@@ -23,14 +23,11 @@
 # ---
 
 # %% [markdown] slideshow={"slide_type": "-"}
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# </div>
-#
-# <style>
-# .smaller {font-size: smaller}
-# </style>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown] slideshow={"slide_type": ""}
 # # Imports et organisation du code
@@ -40,6 +37,7 @@
 
 # %% [markdown]
 # La notion de ***package*** est une extension de la notion de *module*
+#
 # * de même qu'un **module** usuel correspond - en général - à un **fichier** .py
 # * le **package** correspond à un **dossier**
 
@@ -47,6 +45,7 @@
 # Et de même qu'un dossier est un cas particulier de fichier, un package est un cas particulier de module.
 #
 # C'est-à-dire notamment que
+#
 # * **un package est aussi un module**
 # * simplement, alors que dans un module usuel, les **attributs** sont des objets de type code (fonctions et classes typiquement)
 # * dans un package on va trouver des attributs qui sont **aussi des modules**
@@ -85,6 +84,7 @@
 
 # %% [markdown]
 # Et donc pour bien préciser le vocabulaire, dans `mainimport.py` :
+#
 # * l'objet `folder` dénote un **package**
 # * et `folder.foo` dénote un **module**
 
@@ -163,6 +163,7 @@ folder2.function('Hi')
 
 # %% [markdown]
 # Notez aussi, c'est important pour les performances :  
+#
 # * c'est relativement coûteux de charger un module
 # * aussi, l'interpréteur se "souvient" des modules déja chargés
 # * et donc on peut importer de manière répétitive sans impact notoire sur les performances
@@ -173,6 +174,7 @@ folder2.function('Hi')
 # %% [markdown]
 # Pour faire le plus simple possible, lorsque vous écrivez `import tutu`,
 # on cherche un dossier `tutu`, ou un fichier `tutu.py`, selon les règles suivantes :
+#
 # * d'abord dans le dossier où se trouve le point d'entrée
 # * puis dans la variable d'environnement `PYTHONPATH`
 # * puis à l'endroit où sont installés les `pip install ...`
@@ -210,6 +212,7 @@ folder2.function('Hi')
 
 # %% [markdown]
 # Où on va voir que :
+#
 # * c'est bien de grouper son code dans un package
 # * mais à première vue ça casse tout, cependant pas de panique !
 # * il ne **FAUT PAS** tripoter la variable **`PYTHONPATH`**
@@ -478,6 +481,7 @@ folder2.function('Hi')
 #
 # Voici tout ceci illustré sur un exemple réel.
 # Dans  cet exemple, le package (PyPI) s'appelle `apssh`, la commande qu'on veut exposer s'appelle `apssh`, du coup on a
+#
 #  * un dossier `apssh` pour matérialiser le package
 #  * un module `apssh/apssh.py`, qui définit
 #  * une classe `Apssh`, qui expose une méthode `main()`
@@ -502,6 +506,7 @@ folder2.function('Hi')
 # * il faut naturellement obtenir un login/password
 # * avant de pouvoir utiliser le nom `bidule`, il faut l'enregistrer :  
 #   `python setup.py register`
+#
 # * aussi il vous faudra installer `twine`  
 #   `pip install twine`
 #
@@ -509,6 +514,7 @@ folder2.function('Hi')
 #
 # * préparer le packaging  
 #   `python setup.py sdist bdist_wheel`
+#
 # * pousser sur PyPI  
 #   `twine upload dist/*`
 #
@@ -522,6 +528,7 @@ folder2.function('Hi')
 # `pip install bidule`  
 #
 # Remarquez que l'on conseille parfois, pour éviter d'éventuels soucis de divergence entre les commandes `python`/`python3` et `pip`/`pip3`,
+#
 # * de remplacer tous les appels à `pip`
 # * par plutôt `python -m pip`, qui permet d'être sûr qu'on installe dans le bon environnement.
 #
@@ -531,6 +538,7 @@ folder2.function('Hi')
 # * `pip freeze` : pour une liste complète des modules installés dans l'environnement, avec leur numéro de version
 # * `pip list` : sans grand intérêt, si ce n'est dans sa forme  
 #   `pip list -o` qui permet de lister les modules qui pourraient être mis à jour
+#
 # * `pip install -r requirements.txt` : pour installer les modules dont la liste est dans le fichier `requirements.txt`
 
 # %% [markdown]

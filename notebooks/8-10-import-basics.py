@@ -22,10 +22,11 @@
 # ---
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown]
 # # modules et packages
@@ -41,6 +42,7 @@
 #   * des (dizaines de) milliers de **librairies tierces** sont disponibles  
 #     voir PyPI - the Python Package Index  
 #     https://pypi.org/
+#
 # * permet aussi de découper le code en morceaux  
 #   minimiser les couplages
 
@@ -223,6 +225,7 @@ import pack1.pack2.mod
 
 # %% [markdown] slideshow={"slide_type": ""}
 # ici aussi:
+#
 # * on peut utiliser une clause `as newname`
 # * pour renommer la variable importée
 
@@ -324,6 +327,7 @@ pack1.x
 # %% [markdown]
 # * comme l’importation est une opération lourde  
 #   un module n’est chargé qu’**une seule fois** 
+#
 # * les imports suivants réutilisent le module déjà présent en mémoire
 
 # %%
@@ -409,6 +413,7 @@ pack1.pack2.mod.__name__
 # %% [markdown] cell_style="split" tags=["level_intermediate"]
 # * l'import relatif **ne fonctionne pas**  
 #   sur la base de l'arborescence de *fichiers*
+#
 # * mais au contraire il se base sur  
 #   l'arborescence des *modules*
 #   

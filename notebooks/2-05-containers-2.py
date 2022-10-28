@@ -30,11 +30,11 @@
 # ---
 
 # %% [markdown]
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# <span><img src="media/inria-25-alpha.png" /></span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown]
 # # les containers (2/2)
@@ -97,6 +97,7 @@ except TypeError as e:
 #   * *f(key, size)* retourne toujours la même valeur 
 #   * *key* doit être **immutable**  
 #     (sinon, après une modification, *f(key, size)* va renvoyer autre chose)
+#
 # * minimise le risque de collision
 #   * *f(key1, size)* == *f(key2, size)*
 # * une bonne façon de minimiser les collisions  
@@ -445,6 +446,7 @@ dd[0]
 # * c’est un objet qui donne une vue **dynamique** sur un dictionnaire `D`
 # * dynamique, c'est-à-dire que si `D` est modifié après la création de la vue  
 #   la vue continue de refléter la réalité
+#
 # * permet le test d’appartenance avec `in`
 # * permet l’itération (une vue est itérable)
 
@@ -491,6 +493,7 @@ clefs
 #
 # seuls les objets immutables "en profondeur" - on peut dire aussi "globalement immutables"  
 # peuvent convenir; c'est-à-dire qu'ils doivent
+#
 # * être d'un type immutable
 # * et tous leurs composants doivent être globalement immutables
 #

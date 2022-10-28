@@ -30,11 +30,11 @@
 # ---
 
 # %% [markdown]
-# <div class="licence">
-# <span>Licence CC BY-NC-ND</span>
-# <span>Thierry Parmentelat</span>
-# <span><img src="media/inria-25-alpha.png" /></span>
-# </div>
+# Licence CC BY-NC-ND, Thierry Parmentelat
+
+# %% language="python"
+from IPython.display import HTML
+HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown]
 # # chaines et binaire (`str` et `bytes`)
@@ -83,6 +83,7 @@
 # * `x in S` - selon les types:
 #  * `True` si un élément de S  
 #    est égal à x (e.g. `list`)
+#
 #  * **`True` si S contient x**  
 #    c'est le cas pour `str`  
 #    on cherche *une sous-chaine*
@@ -248,6 +249,7 @@ s[::-1]
 # * **ATTENTION**
 #   * les caractères alphanumériques sans accent  
 #     et la ponctuation tiennent sur 1 octet (ASCII)  
+#
 #   * mais **ce n'est pas le cas** en général
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -506,6 +508,7 @@ s2.split('_')
 #
 # * ce qui **n'est pas du tout**  
 #   le cas du type `str`
+#
 #   * décodage fait par Python
 #   * le programmeur choisit un  
 #     encodage (défaut UTF-8)
@@ -537,10 +540,12 @@ s2.split('_')
 # * c'est l'encodage le plus répandu aujourd'hui 
 #   * la famille des ISO-latin et autres cp1252  
 #     sont **à proscrire absolument**
+#
 #   * en 2021, c'est de moins en moins un souci
 #
 # * avec UTF-8, les caractères usuels (dits ASCII),   
 #   sans accent, **sont codés sur 1 octet**
+#
 # * mais ce n'est pas le cas en général :
 #   * les caractères **accentués** européens  
 #     sont codés sur **2 octets**
