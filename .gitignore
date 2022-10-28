@@ -1,0 +1,6 @@
+ap-homework/
+scratch/
+__pycache__
+_build
+.ipynb_checkpoints
+.macnb
