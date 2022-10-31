@@ -28,6 +28,7 @@ parts:
 - caption: "fonctions"
   chapters:
   - file: 6-00-intro
+  - file: 6-01-fonctions
 - caption: "regexps"
   chapters:
   - file: 7-10-regexps

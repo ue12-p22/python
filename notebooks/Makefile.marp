@@ -1,0 +1,14 @@
+MARP-SOURCES = $(shell find . -name '*-mp.md')
+MARP-OUTPUTS = $(foreach html,$(subst -mp.md,-mp.html,$(MARP-SOURCES)),_static/$(html))
+
+marp: $(MARP-OUTPUTS)
+
+_static/%-mp.html: %-mp.md
+	mkdir -p $$(dirname $@)
+	marp -o "$@" $<
+
+list-marp:
+	echo MARP-SOURCES=$(MARP-SOURCES)
+	echo MARP-OUTPUTS=$(MARP-OUTPUTS)
+
+.PHONY: marp list-marp
