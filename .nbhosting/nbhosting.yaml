@@ -20,7 +20,6 @@ tracks:
   - name: '3/9: hash tables'
     notebooks:
     - notebooks/3-00-intro.py
-    - notebooks/2-09-exos.py
     - notebooks/2-05-containers-2.py
     - notebooks/3-11-pep008.py
     - tps/graphs/README-graphs.md

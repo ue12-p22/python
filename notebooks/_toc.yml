@@ -12,6 +12,7 @@ parts:
   - file: 2-03-strings
   - file: 2-04-files
   - file: 2-05-containers-2
+  - file: 2-09-exos
 - caption: "présentation"
   chapters:
   - file: 3-11-pep008

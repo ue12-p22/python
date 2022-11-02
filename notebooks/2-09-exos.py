@@ -55,9 +55,22 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 # ***
 
 # %% [markdown]
+# ## parsing simple de graphes
+#
+# un exercice pour construire un graphe décrit dans un fichier texte
+#
+# en version auto-corrigée:
+#
+# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w3/w3-s4-x1-graph-dict
+#
+
+# %% [markdown]
+# ***
+
+# %% [markdown]
 # ## la calculette postfix
 #
-# un exercice pour évaluer les expressions numériques du genre de 
+# un exercice pour évaluer les expressions numériques du genre de
 #
 # * `10 20 +`  (= 30)
 # * `30 40 + 30 *`  (=2 100)
@@ -86,7 +99,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 # ## le palindrome
 
 # %% [markdown]
-# ### version simple 
+# ### version simple
 #
 # écrivez une fonction qui vérifie si une chaine est un palindrome
 #
