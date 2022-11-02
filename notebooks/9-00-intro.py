@@ -11,7 +11,7 @@
 #       extension: .py
 #       format_name: percent
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 #   language_info:
@@ -34,11 +34,11 @@
 # %% [markdown]
 # # Cours 9/9
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
-# %% [markdown] tags=[]
+# %% [markdown]
 # ## objectifs
 #
 # * pratiquer les générateurs
@@ -59,11 +59,11 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # comme toujours dans
 #
-# https://github.com/ue12-p22/python-solutions
+# <https://github.com/ue12-p22/python-solutions>
 
 # %% [markdown]
 # ## les supports
 #
 # je vous rappelle aussi que vous avez les supports en ligne ici
 #
-# https://nbhosting.inria.fr/builds/ue12-p22-python/handouts/latest/
+# <https://nbhosting.inria.fr/builds/ue12-p22-python/handouts/latest/>

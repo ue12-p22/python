@@ -34,7 +34,7 @@
 # %% [markdown]
 # # Cours 6/9
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 

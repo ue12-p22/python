@@ -245,7 +245,7 @@ print(L1)
 print(L2)
 
 # %% [markdown]
-# * https://docs.python.org/3.5/howto/sorting.html
+# * <https://docs.python.org/3.5/howto/sorting.html>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### avertissement sur les listes

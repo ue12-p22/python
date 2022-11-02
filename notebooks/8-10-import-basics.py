@@ -24,7 +24,7 @@
 # %% [markdown] slideshow={"slide_type": "slide"}
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -41,7 +41,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #   * des centaines de modules dans la **librairie standard** Python
 #   * des (dizaines de) milliers de **librairies tierces** sont disponibles  
 #     voir PyPI - the Python Package Index  
-#     https://pypi.org/
+#     <https://pypi.org/>
 #
 # * permet aussi de découper le code en morceaux  
 #   minimiser les couplages

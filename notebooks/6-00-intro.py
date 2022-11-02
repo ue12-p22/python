@@ -35,7 +35,7 @@
 # %% [markdown]
 # # cours 8/9 : fonctions
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -68,13 +68,6 @@ parts = (
 # %% [markdown]
 # ***évaluez la cellule suivante*** pour faire apparaitre le sommaire des vidéos, en 4 parties
 
-# %% [markdown]
-# ## en version longue
-#
-# pour plus de détails
-#
-# https://nbhosting.inria.fr/auditor/notebook/python-slides:slides/slides/4-1-functions-arguments
-
 # %% hide_input=true scrolled=false
 from IPython.display import display, HTML, IFrame
 
@@ -86,8 +79,15 @@ def index_as_embedded():
 index_as_embedded()
 
 # %% [markdown]
+# ## en version longue
+#
+# pour plus de détails
+#
+# <https://nbhosting.inria.fr/auditor/notebook/python-slides:slides/slides/4-1-functions-arguments>
+
+# %% [markdown]
 # ## les solutions
 #
 # comme toujours dans
 #
-# https://github.com/ue12-p22/python-solutions
+# <https://github.com/ue12-p22/python-solutions>

@@ -25,7 +25,7 @@
 # %% [markdown] slideshow={"slide_type": "-"}
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -209,7 +209,7 @@ add3.__name__, add3.__doc__
 # %% [markdown]
 # expose quelques décorateurs d'usage courant
 #
-# https://docs.python.org/3/library/functools.html
+# <https://docs.python.org/3/library/functools.html>
 
 # %%
 def fibo(n):

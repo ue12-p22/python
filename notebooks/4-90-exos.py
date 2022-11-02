@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -44,25 +44,25 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w4/w4-s3-x2-taxes
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w4/w4-s3-x2-taxes>
 
 # %% [markdown]
 # ## playing with digits
 #
 # sur codewars (6-kyu)
 #
-# https://www.codewars.com/kata/5552101f47fc5178b1000050/train/python
+# <https://www.codewars.com/kata/5552101f47fc5178b1000050/train/python>
 
 # %% [markdown]
 # ## integer reduction
 #
 # sur codewars (6-kyu)
 #
-# https://www.codewars.com/kata/59fd6d2332b8b9955200005f/train/python
+# <https://www.codewars.com/kata/59fd6d2332b8b9955200005f/train/python>
 
 # %% [markdown]
 # ## code de Vigenère
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s3-x2-vigenere
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s3-x2-vigenere>

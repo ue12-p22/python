@@ -100,4 +100,4 @@
 #
 # Pour un aperçu plus vaste des possibilités
 #
-# https://streamlit.io/gallery
+# <https://streamlit.io/gallery>

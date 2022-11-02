@@ -32,7 +32,7 @@
 # %% [markdown] slideshow={"slide_type": "slide"}
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -690,7 +690,7 @@ for i, d in zip_longest(
 # * `permutations`: les permutations ($n!$)
 # * `combinations`: *p parmi n*
 # * et d'autres... 
-# * https://docs.python.org/3/library/itertools.html
+# * <https://docs.python.org/3/library/itertools.html>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # #### exemple avec `product`

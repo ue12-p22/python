@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -386,7 +386,7 @@ f'{y:e} | {y:f} | {y:g} | {y:010.2f} | {y:.2f}'
 
 # %% [markdown]
 # voir aussi pour plus de détails:  
-# https://mkaz.blog/code/python-string-format-cookbook/
+# <https://mkaz.blog/code/python-string-format-cookbook/>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # #### `f"{x=}"` dans Python 3.9

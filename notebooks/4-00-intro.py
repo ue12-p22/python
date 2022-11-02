@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -62,5 +62,5 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 # comme annoncé, vous trouverez les solutions aux exercices
 # des semaines passées ici
 #
-# https://github.com/ue12-p22/python-solutions
+# <https://github.com/ue12-p22/python-solutions>
 #

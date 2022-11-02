@@ -11,7 +11,7 @@
 #       extension: .py
 #       format_name: percent
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 #   language_info:
@@ -28,22 +28,22 @@
 #     transition: cube
 # ---
 
-# %% [markdown] tags=[]
+# %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown]
 # # exercices sur les regexps
 
-# %% [markdown] tags=[]
+# %% [markdown]
 # ## assemblage
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w2/w2-s2-x1-expressions-regulieres
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w2/w2-s2-x1-expressions-regulieres>
 #
 # faire a minima les 3 premiers
 #

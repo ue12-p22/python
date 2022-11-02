@@ -25,7 +25,7 @@
 # %% [markdown] slideshow={"slide_type": "-"}
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -518,7 +518,7 @@ folder2.function('Hi')
 # * pousser sur PyPI  
 #   `twine upload dist/*`
 #
-# Signalons enfin qu'il existe une infra PyPI "de test" sur `https://test.pypi.org` utile quand on ne veut pas polluer l'index officiel.
+# Signalons enfin qu'il existe une infra PyPI "de test" sur <https://test.pypi.org> utile quand on ne veut pas polluer l'index officiel.
 
 # %% [markdown]
 # ### Utiliser `pip` pour installer

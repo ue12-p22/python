@@ -181,7 +181,7 @@ math.sin(math.pi)
 # %% [markdown]
 # **Important**: Entraînez vous aussi à trouver la doc dans google:
 #
-# https://www.google.com/search?q=python+module+math
+# <https://www.google.com/search?q=python+module+math>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## booléens

@@ -425,7 +425,7 @@ dist.interact()
 # #### altair
 
 # %% [markdown]
-# [Altair: Declarative Visualization in Python]https://altair-viz.github.io/gallery/index.html)
+# [Altair: Declarative Visualization in Python](https://altair-viz.github.io/gallery/index.html)
 #
 # Relativement récente, elle fournit une approche déclarative, c'est-à-dire qu'ici aussi il s'agit d'obtenir automatiquement des visualisations plus pertinentes en se préoccupant moins des détails d'implémentation.
 
@@ -433,7 +433,7 @@ dist.interact()
 # #### mpld3
 
 # %% [markdown]
-# https://mpld3.github.io/
+# <https://mpld3.github.io/>
 #
 # Plus anecdotique; je n'ai pas d'expérience à partager avec cette librairie, mais sur la papier l'approche semble prometteuse, puisqu'il s'agit (comme pour plotly) de conciler matplotlib [avec `d3.js`](d3js.org).
 

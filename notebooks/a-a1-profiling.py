@@ -161,4 +161,4 @@
 # %% [markdown] tags=["level_intermediate"]
 # cet article très intéressant vous parle des alternatives à `cProfile`
 #
-# https://pythonspeed.com/articles/beyond-cprofile/
+# <https://pythonspeed.com/articles/beyond-cprofile/>

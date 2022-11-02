@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -49,7 +49,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # en version auto-corrigée:
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w3/w3-s2-x1-comptage
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w3/w3-s2-x1-comptage>
 
 # %% [markdown]
 # ***
@@ -61,7 +61,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # en version auto-corrigée:
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w3/w3-s4-x1-graph-dict
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w3/w3-s4-x1-graph-dict>
 #
 
 # %% [markdown]
@@ -88,7 +88,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # en version auto-corrigée:
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x1b-postfix
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x1b-postfix>
 #
 # seul le premier exo est obligatoire, les rapides peuvent s'attaquer au second
 
@@ -150,7 +150,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 # %% [markdown]
 # ## gravity flip
 #
-# https://www.codewars.com/kata/5f70c883e10f9e0001c89673
+# <https://www.codewars.com/kata/5f70c883e10f9e0001c89673>
 
 # %% [markdown]
 # ***
@@ -158,7 +158,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 # %% [markdown]
 # ## les files de supermarché
 #
-# https://www.codewars.com/kata/57b06f90e298a7b53d000a86
+# <https://www.codewars.com/kata/57b06f90e298a7b53d000a86>
 
 # %% [markdown]
 # ***

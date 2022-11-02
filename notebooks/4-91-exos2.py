@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -44,11 +44,11 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s3-x1-comprehensions
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s3-x1-comprehensions>
 
 # %% [markdown]
 # ## where my anagrams at ?
 #
 # sur codewars (5-kyu)
 #
-# https://www.codewars.com/kata/523a86aa4230ebb5420001e1/train/python
+# <https://www.codewars.com/kata/523a86aa4230ebb5420001e1/train/python>

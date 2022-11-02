@@ -398,4 +398,4 @@ a2dzoom.interact(closeup_around(FUNDAMENTAL))
 #
 # mais ici au moins on les a faites nous-mêmes ;)
 #
-# https://www.youtube.com/watch?v=spUNpyF58BY
+# <https://www.youtube.com/watch?v=spUNpyF58BY>

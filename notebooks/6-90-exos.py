@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -44,25 +44,25 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w4/w4-s6-x1-passage-arguments
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w4/w4-s6-x1-passage-arguments>
 
 # %% [markdown]
 # ## doubler_premier
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s2-x2-doubler-premier
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s2-x2-doubler-premier>
 
 # %% [markdown]
 # ## compare
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s2-x3-compare
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s2-x3-compare>
 
 # %% [markdown]
 # ## tris
 #
 # auto-corrigé sur nbhosting, surtout le dernier exercice `tri_custom`
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s2-x1-multi-tri
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w5/w5-s2-x1-multi-tri>

@@ -35,7 +35,7 @@
 # %% [markdown]
 # # Cours 5/9
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -57,6 +57,6 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # vous trouverez dans
 #
-# https://github.com/ue12-p22/python-solutions/blob/main/graphs.py
+# <https://github.com/ue12-p22/python-solutions/blob/main/graphs.py>
 #
 # les solutions pour le TP sur les parcours de graphe

@@ -369,7 +369,7 @@ interactive_output(sinus4, my_dashboard())
 #
 # pour davantage de détails sur sur les différentes sorties disponibles de matplotlib, et le mode dit 'interactif' avec `plt.ion()`, voir
 #
-# https://matplotlib.org/stable/users/explain/interactive.html#interactive-figures
+# <https://matplotlib.org/stable/users/explain/interactive.html#interactive-figures>
 
 # %% [markdown]
 # Je vous signale enfin un [exemple de notebook publié par la célèbre revue *Nature*](http://www.nature.com/news/ipython-interactive-demo-7.21492), qui pourra vous donner une idée de ce qu'il est possible de faire avec un notebook interactif. Interactif dans le sens où on peut faire varier les paramètres d'une expérience et voir l'impact du changement se refléter immédiatement sur la visualisation.

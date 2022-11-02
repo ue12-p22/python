@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -260,4 +260,4 @@ line(1)
 # la (longue) liste exhaustive des méthodes spéciales  
 # est donnée dans la documentation officielle ici
 #
-# https://docs.python.org/3/reference/datamodel.html#special-method-names
+# <https://docs.python.org/3/reference/datamodel.html#special-method-names>

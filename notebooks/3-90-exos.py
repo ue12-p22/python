@@ -11,7 +11,7 @@
 #       extension: .py
 #       format_name: percent
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 #   language_info:
@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -46,18 +46,18 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # sur codewars (6 kyu)
 #
-# https://www.codewars.com/kata/51b6249c4612257ac0000005/train/python
+# <https://www.codewars.com/kata/51b6249c4612257ac0000005/train/python>
 
 # %% [markdown]
 # ## remove the parentheses
 #
 # sur codewars (6 kyu)
 #
-# https://www.codewars.com/kata/5f7c38eb54307c002a2b8cc8/train/python
+# <https://www.codewars.com/kata/5f7c38eb54307c002a2b8cc8/train/python>
 
 # %% [markdown]
 # ## simple time difference
 #
 # sur codewars (6 kyu)
 #
-# https://www.codewars.com/kata/5b76a34ff71e5de9db0000f2/train/python
+# <https://www.codewars.com/kata/5b76a34ff71e5de9db0000f2/train/python>

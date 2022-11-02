@@ -32,7 +32,7 @@
 # %% [markdown]
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
-# %% language="python"
+# %%
 from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
@@ -44,18 +44,18 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x8-quaternion
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x8-quaternion>
 
 # %% [markdown]
 # ## une classe de polynômes
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x2-polynomial
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x2-polynomial>
 
 # %% [markdown]
 # ## les chiffres romains
 #
 # auto-corrigé sur nbhosting
 #
-# https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x7-roman
+# <https://nbhosting.inria.fr/auditor/notebook/exos-mooc:exos/w6/w6-s9-x7-roman>
