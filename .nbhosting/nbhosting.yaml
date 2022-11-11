@@ -11,7 +11,7 @@ tracks:
     - notebooks/tps/snake/README-snake.md
   - name: '2/9: types de base'
     notebooks:
-    - notebooks/2-00-intro.py
+#    - notebooks/2-00-intro.py
     - notebooks/2-01-numbers.py
     - notebooks/2-02-containers-1.py
     - notebooks/2-03-strings.py
@@ -19,20 +19,20 @@ tracks:
     - notebooks/2-09-exos.py
   - name: '3/9: hash tables'
     notebooks:
-    - notebooks/3-00-intro.py
+#    - notebooks/3-00-intro.py
     - notebooks/2-05-containers-2.py
     - notebooks/3-11-pep008.py
     - tps/graphs/README-graphs.md
     - notebooks/3-90-exos.py
   - name: "4/9: it\xE9rations"
     notebooks:
-    - notebooks/4-00-intro.py
+#    - notebooks/4-00-intro.py
     - tps/graphs/README-graphs.md
     - notebooks/4-11-iterations-1.py
     - notebooks/4-90-exos.py
   - name: "5/9: it\xE9rations et classes (1)"
     notebooks:
-    - notebooks/5-00-intro.py
+#    - notebooks/5-00-intro.py
     - notebooks/4-90-exos.py
     - notebooks/4-12-iterations-2.py
     - notebooks/4-91-exos2.py
@@ -40,7 +40,7 @@ tracks:
     - tps/students/README-students.md
   - name: "6/9: classes (2)"
     notebooks:
-    - notebooks/5-01-intro.py
+#    - notebooks/5-01-intro.py
     - notebooks/5-12-dunder-specials.py
     - notebooks/5-90-exos.py
   - name: "7/9 classes (3)"
@@ -52,12 +52,14 @@ tracks:
     - tps/expressions-lang/README-explang.md
   - name: '8/9: fonctions'
     notebooks:
+# keep temporarily until the videos get embedded
+# some place else
     - notebooks/6-00-intro.py
     - notebooks/6-90-exos.py
     - tps/queens/README-queens.md
   - name: "9/9: \xE9pilogue"
     notebooks:
-    - notebooks/9-00-intro.py
+#    - notebooks/9-00-intro.py
     - notebooks/7-20-generators.py
     - notebooks/7-21-exos-generators.py
     - notebooks/7-10-regexps.py
