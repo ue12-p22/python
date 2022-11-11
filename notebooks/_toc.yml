@@ -31,9 +31,12 @@ parts:
   - file: 6-00-intro
 - caption: "divers"
   chapters:
-  - file: 7-30-regexps
-  - file: 7-40-generators
   - file: 7-10-argparse
+  - file: 7-20-recent-stuff
+  - file: 7-30-regexps
+  - file: 7-31-exos-regexps
+  - file: 7-40-generators
+  - file: 7-41-exos-generators
 - caption: "organisation des sources"
   chapters:
   - file: 8-10-import-basics
