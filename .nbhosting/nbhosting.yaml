@@ -64,11 +64,11 @@ tracks:
     - notebooks/7-21-exos-generators.py
     - notebooks/7-10-regexps.py
     - notebooks/7-11-exos-regexp.py
+    - notebooks/7-50-argparse.py
     - notebooks/8-10-import-basics.py
     - notebooks/8-11-imports-sources.py
   - name: optionnel
     notebooks:
-    - notebooks/9-10-argparse.py
     - notebooks/9-11-properties.py
     - notebooks/9-12-decorators.py
     - tps/metro/README-metro.md

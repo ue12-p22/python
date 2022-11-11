@@ -29,19 +29,17 @@ parts:
 - caption: "fonctions"
   chapters:
   - file: 6-00-intro
-- caption: "regexps"
+- caption: "divers"
   chapters:
   - file: 7-10-regexps
-- caption: "générateurs"
-  chapters:
   - file: 7-20-generators
+  - file: 7-50-argparse
 - caption: "organisation des sources"
   chapters:
   - file: 8-10-import-basics
   - file: 8-11-imports-sources
-- caption: "divers"
+- caption: "avancé"
   chapters:
-  - file: 9-10-argparse
   - file: 9-11-properties
   - file: 9-12-decorators
 # - caption: "notebooks interactifs"
