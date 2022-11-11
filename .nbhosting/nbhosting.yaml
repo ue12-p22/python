@@ -60,11 +60,11 @@ tracks:
   - name: "9/9: \xE9pilogue"
     notebooks:
 #    - notebooks/9-00-intro.py
-    - notebooks/7-20-generators.py
-    - notebooks/7-21-exos-generators.py
-    - notebooks/7-10-regexps.py
-    - notebooks/7-11-exos-regexp.py
-    - notebooks/7-50-argparse.py
+    - notebooks/7-40-generators.py
+    - notebooks/7-41-exos-generators.py
+    - notebooks/7-30-regexps.py
+    - notebooks/7-31-exos-regexps.py
+    - notebooks/7-10-argparse.py
     - notebooks/8-10-import-basics.py
     - notebooks/8-11-imports-sources.py
   - name: optionnel
