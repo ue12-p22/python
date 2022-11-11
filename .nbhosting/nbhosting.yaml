@@ -27,13 +27,13 @@ tracks:
   - name: "4/9: it\xE9rations"
     notebooks:
 #    - notebooks/4-00-intro.py
-    - tps/graphs/README-graphs.md
+#    - tps/graphs/README-graphs.md
     - notebooks/4-11-iterations-1.py
     - notebooks/4-90-exos.py
   - name: "5/9: it\xE9rations et classes (1)"
     notebooks:
 #    - notebooks/5-00-intro.py
-    - notebooks/4-90-exos.py
+#    - notebooks/4-90-exos.py
     - notebooks/4-12-iterations-2.py
     - notebooks/4-91-exos2.py
     - notebooks/5-11-classes.py

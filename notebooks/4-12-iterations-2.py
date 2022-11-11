@@ -19,7 +19,7 @@
 #     nbconvert_exporter: python
 #     pygments_lexer: ipython3
 #   nbhosting:
-#     title: "les it\xE9rations - suite"
+#     title: "les it\xE9rations (2/2)"
 #   rise:
 #     autolaunch: true
 #     slideNumber: c/t
@@ -37,7 +37,7 @@ from IPython.display import HTML
 HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
 
 # %% [markdown] slideshow={"slide_type": ""}
-# # les itérations - suite
+# # les itérations (2/2)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## compréhensions
