@@ -54,6 +54,7 @@ tracks:
     - notebooks/7-31-exos-regexps.py
     - notebooks/7-10-argparse.py
   - name: "organisation des sources"
+    notebooks:
     - notebooks/8-10-import-basics.py
     - notebooks/8-11-imports-sources.py
   - name: avancé
