@@ -27,7 +27,7 @@
 
 # %%
 from IPython.display import HTML
-HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_static/style.html")
+HTML(filename="_static/style.html")
 
 # %% [markdown] slideshow={"slide_type": ""}
 # # traits récents
@@ -81,6 +81,7 @@ HTML(url="https://raw.githubusercontent.com/ue12-p22/python/main/notebooks/_stat
 #   else:
 #       something_else()
 #   ```
+#
 # * l'expression, qu'on appelle .. eh bien tout simplement l'expression conditionnelle
 #   ```python
 #   do_something() if condition else something_else()
@@ -175,7 +176,7 @@ def display(token):
 
 display("mail:jean.mineur@minesparis.psl.eu")
 display("https://nbhosting.inria.fr/the-path/to-the/notebooks")
-        
+
 
 # %% [markdown]
 # ## l'instruction `match`

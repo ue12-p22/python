@@ -1,4 +1,4 @@
-NOTEBOOKS = $(shell git ls-files [0-9]*)
+NOTEBOOKS = $(shell git ls-files [0-9]*.{py,md})
 
 all: book
 
