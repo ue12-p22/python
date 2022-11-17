@@ -53,7 +53,7 @@ class Student:
     all_students = []   # ici all_students est un attribut
                         # de la classe, et pas des instances
     
-    def __init__(self, name):
+    def __init__(self, name): 
         self.name = name
         Student.all_students.append(self)  # on peut y faire référence 
                                            # en partant de la classe
@@ -78,11 +78,11 @@ print(f"after step 1 we have {len(Student.all_students)} students")
 
 
 # %% [markdown]
-# <div class="micro-note">
+# <div class="note">
 #     
-#     notez que dans la définition de `__init__` on aurait pu aussi 
-#     écrire `self.all_students.append(self)`   
-#     pourquoi ?
+# notez que dans la définition de `__init__` on aurait pu aussi 
+# écrire `self.all_students.append(self)`   
+# pourquoi ?
 #     
 # </div>    
 

@@ -1,6 +1,4 @@
-/* this goes with my global default setting
- * that has rise use reveal's theme sky
- */
+/* this goes with our global default settings i.e. the sky theme */
 .reveal {
     font-family: "Quicksand", sans-serif;
 }
@@ -23,14 +21,8 @@ body.rise-enabled .reveal ol, body.rise-enabled .reveal dl, body.rise-enabled .r
     margin-top: 0.2em;
 }
 
+/* make the note appear distanced from the slide content */
 .note {
-    margin-top: 25px;
-    font-size: 75%;
-    font-style: italic;
-}
-
-.micro-note {
     margin-top: 15px;
-    font-size: 50%;
-    font-style: italic;
-}    
+    font-size: 80%;
+}

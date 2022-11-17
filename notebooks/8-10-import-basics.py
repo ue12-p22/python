@@ -361,7 +361,7 @@ importlib.reload(pack1)
 # %autoreload 2
 
 # %% [markdown]
-# <div class="micro-note">
+# <div class="note">
 # pour installer ce réglage par défaut :
 # <pre>
 # <code>

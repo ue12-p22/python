@@ -101,12 +101,12 @@ with open('temporaire.txt') as f:
 
 # %% [markdown] cell_style="split"
 # <div class="note">
-#     
-# **Précision**
+#
+# **précision**
 #
 # * `print(...)` ajoute une fin de ligne
 # * `print(..., end="")` évite cet ajout automatique
-#     
+#
 # </div>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
