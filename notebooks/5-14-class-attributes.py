@@ -74,7 +74,7 @@ print(f"after step 1 we have {len(s.all_students)} students")
 # du coup on peut comme cela agréger des choses relatives
 # à tous les objets de la classe
 s = Student('pierre')
-print(f"after step 1 we have {len(Student.all_students)} students")
+print(f"after step 2 we have {len(Student.all_students)} students")
 
 
 # %% [markdown]

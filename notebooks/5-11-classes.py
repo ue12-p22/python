@@ -261,6 +261,12 @@ stack
 # * en fait il n'y a pas de différence de fond 
 #   * entre les types prédéfinis (`str`, ...)
 #   * et les classes créées avec `class`
+# * `numpy.ndarray` utilise à fond la surcharge des opérateurs
+#   ```python
+#   array[a:b, :]
+#   array1 + array2
+#   # etc...
+#   ```
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### exemple : `class Point`
@@ -295,10 +301,13 @@ a.distance(b)
 # %% slideshow={"slide_type": ""}
 class Circle1:
 
+    # the type hints here are optional, could have been
+    # def __init__(self, center, point):
+
     def __init__(self, center: Point, radius: float):
         self.center = center
         self.radius = radius
-        
+    
     def __repr__(self):
         return f"[Circle: {self.center} ⟷ {self.radius:.2f}]"
     
@@ -343,7 +352,7 @@ class Circle2:
 # %%
 c2 = Circle2(Point(0, 0), 5)
 
-# alors on peut faire le même calcul, mais
+# alors on peut faire le même calcul, mais cette fois
 # l'écrire comme un test d'appartenance habituel 'x in y'
 a in c2
 
@@ -413,8 +422,11 @@ class Student:
     def __repr__(self):
         return f"{self.first_name} {self.last_name}"
     
+    # again the type hint here is optional, could be just
+    # def age(self):
+    
     def age(self) -> TimeDelta:
-        # the différence between 2 Dates is a TimeDelta
+        # the difference between 2 Dates is a TimeDelta
         return Date.today() - self.birth_date
     
     def repr_age(self) -> str:

@@ -260,7 +260,7 @@ vector = Vector(2, 2)
 # %% [markdown] slideshow={"slide_type": "slide"} tags=["level_intermediate"]
 # ### digression : l'attribut spécial `__dict__`
 
-# %% [markdown] slideshow={"slide_type": ""} cell_style="split" tags=["level_intermediate"]
+# %% [markdown] slideshow={"slide_type": ""} tags=["level_intermediate"]
 # pour visualiser la même chose sans ipythontutor  
 # sachez que les (objets qui sont des) espaces de nom
 #
@@ -268,9 +268,12 @@ vector = Vector(2, 2)
 # * qui s'appelle `__dict__`
 # * qui permet d'inspecter un espace de nom
 #
-# ce n'est pas une notion à retenir,  
-# mais on va s'en servir dans la suite  
+# <div class=note>
+#     
+# ce n'est pas une notion à retenir, mais on va s'en servir dans la suite  
 # pour regarder le contenu des espaces de nom
+#     
+# </div>    
 
 # %% tags=["level_intermediate"]
 # dans l'instance
@@ -414,7 +417,7 @@ subvector.foo = 12
 # ```
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# ## héritage
+# ## héritage - syntaxe
 
 # %% [markdown] slideshow={"slide_type": ""} cell_style="split"
 # une classe peut hériter d’une  
