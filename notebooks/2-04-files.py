@@ -201,7 +201,20 @@ with tmp.open() as feed:
     for line in feed:
         print(line, end="")
 
-# %% [markdown]
+# %%
+# on peut faire des calculs sur les noms de fichier
+tmp.suffix
+
+# %% cell_style="split"
+# changer de suffixe
+tmp.with_suffix(".py")
+
+# %% cell_style="split"
+# calculer le chemin absolu
+# le couper en morceaux, etc...
+tmp.absolute().parts
+
+# %% [markdown] slideshow={"slide_type": "slide"}
 # ### construire un objet `Path`
 
 # %% cell_style="split"
