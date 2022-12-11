@@ -106,7 +106,7 @@ HTML(filename="_static/style.html")
 #   * prenant tous les éléments de l’indice i à l’indice j-1, par sauts de k éléments
 
 # %% [markdown] cell_style="split" slideshow={"slide_type": "slide"}
-# <img src="media/egg-bacon.png"/>
+# <img src="media/egg-bacon.svg"/>
 
 # %% [markdown] cell_style="split"
 # #### *slicing*
@@ -137,7 +137,7 @@ s[-3:10]
 s[:]
 
 # %% [markdown] cell_style="split" slideshow={"slide_type": "slide"}
-# <img src="media/egg-bacon-bornes.png" text-align="center">
+# <img src="media/egg-bacon-bornes.svg" text-align="center">
 
 # %% [markdown] cell_style="split" slideshow={"slide_type": ""}
 # #### les bornes
@@ -158,7 +158,7 @@ s[6:]
 s[0:3] + s[3:6] + s[6:] == s
 
 # %% [markdown] cell_style="split" slideshow={"slide_type": "slide"}
-# <img src="media/egg-bacon.png" text-align="center">
+# <img src="media/egg-bacon.svg" text-align="center">
 
 # %% [markdown] cell_style="split"
 # #### le pas
@@ -181,7 +181,7 @@ s[:8:3]
 s[-2::-3]
 
 # %% [markdown] cell_style="split" slideshow={"slide_type": "slide"}
-# <img src="media/egg-bacon.png" text-align="center">
+# <img src="media/egg-bacon.svg" text-align="center">
 
 # %% [markdown] cell_style="split"
 # #### pas d'exception
@@ -203,7 +203,7 @@ s[5:100]
 s[100:200]
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# <img src="media/egg-bacon.png" text-align="center">
+# <img src="media/egg-bacon.svg" text-align="center">
 
 # %% cell_style="split"
 s[-1]
