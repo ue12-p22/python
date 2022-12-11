@@ -365,7 +365,7 @@ f"360° = {2*math.pi} radians"
 # #### formatage des chaînes de caractères
 
 # %% [markdown] slideshow={"slide_type": ""}
-# ![](media/f-string.png)
+# ![](media/f-string.svg)
 
 # %%
 print(f"ᴨ arrondi à deux décimales = {math.pi:.2f}")
