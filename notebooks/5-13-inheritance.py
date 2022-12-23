@@ -258,30 +258,27 @@ class Vector:
 vector = Vector(2, 2)
 
 # %% [markdown] slideshow={"slide_type": "slide"} tags=["level_intermediate"]
-# ### digression : l'attribut spécial `__dict__`
+# ### digression : la fonction `vars()`
 
 # %% [markdown] slideshow={"slide_type": ""} tags=["level_intermediate"]
 # pour visualiser la même chose sans ipythontutor  
-# sachez que les (objets qui sont des) espaces de nom
-#
-# * ont un **attribut spécial**
-# * qui s'appelle `__dict__`
-# * qui permet d'inspecter un espace de nom
+# sachez que l'on peut inspecter le contenu d'un espace de noms
+# avec la fonction `vars(obj)`
 #
 # <div class=note>
 #     
-# ce n'est pas une notion à retenir, mais on va s'en servir dans la suite  
+# ce n'est pas forcément une notion à retenir, mais on va s'en servir dans la suite  
 # pour regarder le contenu des espaces de nom
 #     
 # </div>    
 
 # %% tags=["level_intermediate"]
 # dans l'instance
-list(vector.__dict__)
+vars(vector)
 
 # %% slideshow={"slide_type": ""} tags=["level_intermediate"]
 # les attributs 'intéressants' de Vector
-[att for att in Vector.__dict__ if '__' not in att or att == '__init__']
+[att for att in vars(Vector) if '__' not in att or att == '__init__']
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### la  fonction `dir()`
@@ -386,7 +383,7 @@ subvector.length()
 # l'attribut est créé directement dans l'objet
 subvector.foo = 12
 
-'foo' in subvector.__dict__
+'foo' in vars(subvector)
 
 
 # %% [markdown] slideshow={"slide_type": "slide"} tags=["level_intermediate"]
