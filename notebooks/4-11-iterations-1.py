@@ -478,7 +478,7 @@ with open("data/une-charogne.txt") as feed:
 # ### `zip`
 
 # %% [markdown]
-# `zip` fonctionne un peu comme `enumerate` mais entre deux itérables:
+# `zip` fonctionne un peu comme `enumerate` mais entre plusieurs itérables:
 #
 # ![](media/iter-zip.svg)
 
