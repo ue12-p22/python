@@ -172,7 +172,6 @@ for value in agenda.values():
 # %%
 # pour illustrer break, et for .. else
 
-
 # boucle (1)
 for p in range(2, 10):
     # boucle (2)
@@ -209,6 +208,8 @@ except Exception as exc:
 # %% cell_style="center"
 s = {1, 2, 3}
 
+# avec les listes on peut aussi utiliser [:]
+# mais ici sur un ensemble ça ne fonctionnerait pas 
 for x in s.copy():
     if x == 1:
         s.remove(x)
@@ -222,14 +223,12 @@ s
 # #### soyez explicite
 
 # %% cell_style="split"
-D = {
-    'alice': 35,
-    'bob': 9,
-    'charlie': 6,
-}
+D = {'alice': 35, 'bob': 9, 'charlie': 6}
 
+# %% cell_style="split"
 # pas pythonique (implicite)
-for t in D.items():         
+
+for t in D.items():
     print(t[0], t[1])
 
 # %% cell_style="split"
@@ -277,6 +276,9 @@ L = [20, 34, 57, 2, 25]
 
 min(L), sum(L)
 
+# %% cell_style="split"
+list(filter(lambda x: x%2 == 0, L))
+
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### itérateurs
 #
@@ -290,14 +292,15 @@ min(L), sum(L)
 # %% cell_style="split" slideshow={"slide_type": ""}
 import sys
 
-# l'exemple le plus simple 
-# d'itérateur est range()
-R = range(1000)
-sys.getsizeof(R)
+L = list(range(1000))
+sys.getsizeof(L)
 
 # %% cell_style="split"
-L = list(R)
-sys.getsizeof(L)
+# avec iter() on fabrique 
+# un itérateur
+I = iter(L)
+
+sys.getsizeof(I)
 
 # %% [markdown] cell_style="split" slideshow={"slide_type": "slide"}
 # cette boucle Python
@@ -309,7 +312,9 @@ sys.getsizeof(L)
 # %% [markdown] cell_style="split"
 # est comparable à ceci en C
 # ```C
-# for (int i=0; i<100000; i++) {
+# for (int i=0; 
+#      i<100000; 
+#      i++) {
 #     /* do stuff */
 # }
 # ```
@@ -318,12 +323,12 @@ sys.getsizeof(L)
 # ce qui montre qu'on peut s'en sortir  
 # avec **seulement un entier** comme mémoire
 #
-# donc on ne veut **pas devoir allouer**  
+# et donc on ne veut **pas devoir allouer**  
 # une liste de 100.000 éléments  
-# juste pour pouvoir faire cette boucle
+# juste pour pouvoir faire cette boucle !
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# ### création d'itérateurs
+# ### combinaisons d'itérations
 
 # %% [markdown]
 # Python propose des outils pour **créer** et **combiner** les itérables:
@@ -337,7 +342,7 @@ sys.getsizeof(L)
 # ### `range`
 
 # %% [markdown]
-# * `range` crée un itérateur qui itère sur un intervalle de nombres entiers
+# * `range` crée un itérateur(*) qui itère sur un intervalle de nombres entiers
 # * arguments : même logique que le slicing
 #   * début (inclus), fin (exclus), pas
 #   * **sauf** (curiosité) : si un seul argument, c'est **la fin**
@@ -352,6 +357,13 @@ for i in range(10, 21, 2):
 for i in range(5):
     print(i, end=" ")
 
+# %% [markdown]
+# <div class="note">
+#
+# (*) en réalité un `range()` n'est pas techniquement un itérateur; mais bon ça y ressemble beaucoup...
+#
+# </div>
+
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### un `range` n'est **pas une liste**
 
@@ -364,11 +376,12 @@ for i in range(5):
 # %% cell_style="split"
 # 10**20 c'est 100 millions de Tera
 
-iterateur = range(10**20)
-iterateur
+# un range est presque un iterateur
+iterator = range(10**20)
+iterator
 
 # %% cell_style="split"
-for item in iterateur:
+for item in iterator:
     if item >= 5:
         break
     print(item, end=" ")
@@ -397,13 +410,21 @@ for item in iterateur:
 from itertools import count
 # count?
 
-# %%
+# %% cell_style="split"
 # si on n'arrête pas la boucle nous mêmes
 # ce fragment va boucler sans fin
 
 for i in count():
     print(i, end=" ")
     if i >= 5:
+        break
+
+# %% cell_style="split"
+# on peut changer les réglages
+
+for i in count(2, 5):
+    print(i, end=" ")
+    if i >= 12:
         break
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -417,21 +438,27 @@ for i in count():
 #     item = liste[i]
 #     print(item, end=" ")
 # ```
-
-# %% [markdown] cell_style="split"
-# comment faire alors si on a vraiment besoin de l'index `i` ?
+#
+# mais comment faire alors si on a vraiment besoin de l'index `i` ?
 #
 # → il suffit d'utiliser la *builtin* `enumerate()`
 
-# %% cell_style="center"
-L = [1, 10, 100, 1000]
+# %% cell_style="split"
+L = [1, 10, 100]
 
-# %% cell_style="center"
 for i, item in enumerate(L):
     print(f"{i}: {item}")
 
+# %% cell_style="split"
+# on peut aussi commencer 
+# à autre chose que 0
+
+with open("some-file.txt") as f:
+    for lineno, line in enumerate(f, 1):
+        print(f"{lineno}:{line}", end="")
+
 # %% [markdown] slideshow={"slide_type": "slide"}
-# ![](media/iter-enumerate.png)
+# ![](media/iter-enumerate.svg)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # #### `enumerate()` ...
@@ -453,7 +480,7 @@ with open("data/une-charogne.txt") as feed:
 # %% [markdown]
 # `zip` fonctionne un peu comme `enumerate` mais entre deux itérables:
 #
-# ![](media/iter-zip.png)
+# ![](media/iter-zip.svg)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # #### `zip`
@@ -487,7 +514,7 @@ for index, item in zip(count(), L):
     print(f"{index} {item}")
 
 # %% [markdown] cell_style="split"
-# ![](media/iter-zip-count.png)
+# ![](media/iter-zip-count.svg)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### un itérateur s'épuise
@@ -574,7 +601,7 @@ for a, b in E:
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### `chain`
 #
-# ![](media/iter-chain.png)
+# ![](media/iter-chain.svg)
 
 # %% cell_style="center" slideshow={"slide_type": ""}
 from itertools import chain
@@ -594,7 +621,7 @@ for i, d in enumerate(chain(data1, data2)):
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### `cycle`
 #
-# ![](media/iter-cycle.png)
+# ![](media/iter-cycle.svg)
 
 # %%
 # cycle() ne termine jamais non plus
@@ -678,7 +705,7 @@ for i, d in zip_longest(
     print(f"{i} {d}")
 
 # %% [markdown] cell_style="split"
-# ![](media/iter-zip-longest.png)
+# ![](media/iter-zip-longest.svg)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### `itertools` & combinatoires

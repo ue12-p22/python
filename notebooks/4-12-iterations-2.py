@@ -48,12 +48,12 @@ HTML(filename="_static/style.html")
 # %% [markdown] cell_style="split"
 # * appliquer une fonction à un ensemble de valeurs: `map`
 #
-# ![](media/iter-map.png)
+# ![](media/iter-map.svg)
 
 # %% [markdown] cell_style="split"
 # * idem en excluant certaines entrées: `map` + `filter`
 #
-# ![](media/iter-map-filter.png)
+# ![](media/iter-map-filter.svg)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### compréhension de liste
