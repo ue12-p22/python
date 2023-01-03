@@ -131,7 +131,7 @@ result
 # la liste des cubes
 # des entiers pairs entre 0 et 5
 
-[x**3 for x in range(6) if x % 2 == 0]
+[x**2 for x in range(6) if x % 2 == 0]
 
 # %% cell_style="split"
 # si on décortique
@@ -155,7 +155,7 @@ result
 # %%
 # une liste toute plate comme résultat
 # malgré deux boucles for imbriquées
-[x+10*y for x in (1, 2) for y in (1, 2)]
+[10*x + y for x in (1, 2) for y in (1, 2)]
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # #### compréhensions imbriquées - exemple
@@ -165,7 +165,7 @@ result
 # il faut imaginer des for imbriqués **dans le même ordre**
 
 # %% cell_style="split"
-[x + 10*y for x in range(1, 5) 
+[10*x + y for x in range(1, 5) 
      if x % 2 == 0 
          for y in range(1, 5)
              if y % 2 == 1]
@@ -178,7 +178,7 @@ for x in range(1, 5):
     if x % 2 == 0:
         for y in range(1, 5):
             if y % 2 == 1:
-                L.append(x + 10*y)
+                L.append(10*x + y)
 L
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -264,8 +264,12 @@ index['Martin']
 #   i.e. **avant même** de faire quoi que ce soit d'autre
 
 # %% [markdown]
+# <div class=note>
+#
 # finalement c'est **exactement** la même discussion que itérateur *vs* itérable  
-# e.g. quand on avait comparé `range()` avec une liste
+# ou quand on avait comparé `range()` avec une liste
+#     
+# </div>    
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### expression génératrice
@@ -281,7 +285,7 @@ data = [0, 1]
 # %% cell_style="split"
 # compréhension
 
-C = [x+10*y for x in data for y in data]
+C = [10*x + y for x in data for y in data]
 
 for y in C:
     print(y)
@@ -289,7 +293,7 @@ for y in C:
 # %% cell_style="split"
 # genexpr
 
-G = (x+10*y for x in data for y in data)
+G = (10*x + y for x in data for y in data)
 
 for y in G:
     print(y)
@@ -385,8 +389,8 @@ sum((notes_eleve['maths'] for notes_eleve in notes_classe)) / len(notes_classe)
 # (remarquez une seul niveau de parenthèses, et l'absence de [])
 sum(notes_eleve['maths'] for notes_eleve in notes_classe) / len(notes_classe)
 
-# %% [markdown] slideshow={"slide_type": "slide"} tags=["level_advanced"]
+# %% [markdown] slideshow={"slide_type": "slide"} tags=["level_intermediate"]
 # # épilogue
 #
 # pour terminer le tour des concepts Python qui contribuent aux itérations,
-# il nous restera à voir la notion de **fonction génératrice** que l'on verra dans le cours #7
+# il nous restera à voir la notion de **fonction génératrice** que l'on verra plus tard
