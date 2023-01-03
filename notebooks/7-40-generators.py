@@ -90,7 +90,8 @@ for square in squares(data):
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### vocabulaire
 #
-# * une expression génératrice retourne un objet de type `generator`
+# * une expression génératrice `(expr(x) for x in iterable)`  
+#   retourne un objet de type `generator`
 # * il est fréquent - par abus de langage - d'appeler aussi simplement *générateur*  
 #   une fonction génératrice
 #
@@ -102,6 +103,9 @@ for square in squares(data):
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## expression génératrice *vs* fonction génératrice
+
+# %%
+data = (0, -1, 2)
 
 # %% cell_style="split"
 # ces deux objets sont équivalents
@@ -180,16 +184,26 @@ def divs(n):
 
 
 # %% cell_style="split"
-for div in divs(12):
-    print(div, end=" ")
+list(divs(12))
 
-# %% cell_style="center"
+# %% [markdown]
+# ***
+
+# %% cell_style="split"
 # maintenant on voudrait écrire
 # quelque chose qui fasse en gros
 n = 12
 for d1 in divs(n):
     for d2 in divs(d1):
         print(d2)
+
+# %% cell_style="split"
+# puisque
+list(divs(6)), list(divs(4))
+
+# %% cell_style="split"
+# et 
+list(divs(3)), list(divs(2))
 
 
 # %% [markdown]
@@ -311,8 +325,10 @@ def carres():
 carres_1 = carres()
 
 # %%
-for _ in range(3):
-    print(next(carres_1))
+from itertools import islice
+
+# avec islice pour n'utiliser que les 3 premiers
+list(islice(carres_1, 3))
 
 # %% slideshow={"slide_type": "slide"}
 # qu'on peut facilement remplacer par une expression génératrice
@@ -321,12 +337,11 @@ from itertools import count
 carres_2 = (i**2 for i in count())
 
 # %%
-for _ in range(3):
-    print(next(carres_2))
+list(islice(carres_2, 3))
 
 
 # %% slideshow={"slide_type": "slide"}
-# ou - un peu plus pédestre, dans ce cas d'usage
+# ou bien, un peu plus pédestre, dans ce cas d'usage
 # on peut écrire une classe qui implémente
 # __iter__ et __next__
 #
@@ -336,7 +351,7 @@ for _ in range(3):
 class Carres3:
     def __init__(self):
         self.i = 0
-    def __iter_(self):
+    def __iter__(self):
         return self
     def __next__(self):
         carre = self.i * self.i
@@ -346,33 +361,18 @@ class Carres3:
 carres_3 = Carres3()
 
 # %%
-for _ in range(3):
-    print(next(carres_3))
+list(islice(carres_3, 3))
 
 
 # %% slideshow={"slide_type": "slide"} tags=["level_intermediate"]
-# ici on crée un objet qui est bien itérable
-# mais comme __iter__(self) renvoie autre chose que self,
-# ce n'est pas un itérateur, on ne peut pas faire next() dessus
+# ou bien, encore plus simple
 
 class Carres4:
      def __iter__(self):
-         return ( i*i for i in count() )
+         for i in count():
+            yield i**2
 
 carres_4 = Carres4()
 
 # %%
-# on ne peut pas faire next()
-try:
-    for _ in range(3):
-        print(next(carres_4))
-except Exception as exc:
-    print(f"OOPS, {type(exc)} {exc}")
-
-# %%
-# mais c'est quand même un itérable
-# donc on peut faire un for avec
-for x in carres_4:
-    print(x)
-    if x >= 4:
-        break
+list(islice(carres_4, 3))
