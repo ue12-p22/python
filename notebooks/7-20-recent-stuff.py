@@ -123,7 +123,7 @@ a = 10
 b = 20
 c = a + b
 
-# %%
+# %% tags=["raises-exception"]
 # mais je ne pourrais pas le remplacer par ceci
 c = (a = 10) + (b = 20)
 

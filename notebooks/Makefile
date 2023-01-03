@@ -6,6 +6,8 @@ include Makefile.style
 
 include Makefile.norm
 
+include Makefile.toc
+
 book:
 	jupyter-book build .
 

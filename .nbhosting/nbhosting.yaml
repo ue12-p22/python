@@ -21,20 +21,20 @@ tracks:
   - name: "présentation"
     notebooks:
     - notebooks/3-11-pep008.py
-    - notebooks/3-90-exos.py
+#    - notebooks/3-90-exos.py
   - name: "it\xE9rations"
     notebooks:
     - notebooks/4-11-iterations-1.py
     - notebooks/4-12-iterations-2.py
-    - notebooks/4-90-exos.py
-    - notebooks/4-91-exos2.py
+#    - notebooks/4-90-exos.py
+#    - notebooks/4-91-exos2.py
   - name: "classes"
     notebooks:
     - notebooks/5-11-classes.py
     - notebooks/5-12-dunder-specials.py
     - notebooks/5-13-inheritance.py
     - notebooks/5-14-class-attributes.py
-    - notebooks/5-90-exos.py
+#    - notebooks/5-90-exos.py
 # ??? - tps/students/README-students.md
 #     - tps/boids/README-boids.md
 #     - tps/auctions/README-auctions.md
@@ -44,15 +44,17 @@ tracks:
 # keep temporarily until the videos get embedded
 # some place else
     - notebooks/6-00-intro.py
-    - notebooks/6-90-exos.py
+#    - notebooks/6-90-exos.py
 # ???   - tps/queens/README-queens.md
   - name: "divers"
     notebooks:
-    - notebooks/7-40-generators.py
-    - notebooks/7-41-exos-generators.py
+    - notebooks/7-10-argparse.py
+    - notebooks/7-20-recent-stuff.py
+    - notebooks/7-25-enums-dataclasses.py
     - notebooks/7-30-regexps.py
     - notebooks/7-31-exos-regexps.py
-    - notebooks/7-10-argparse.py
+    - notebooks/7-40-generators.py
+    - notebooks/7-41-exos-generators.py
   - name: "organisation des sources"
     notebooks:
     - notebooks/8-10-import-basics.py
@@ -62,16 +64,16 @@ tracks:
     - notebooks/9-11-properties.py
     - notebooks/9-12-decorators.py
 # ???    - tps/metro/README-metro.md
-- description: "Cours du S2"
-  id: s2
-  name: "S2"
-  sections:
-  - name: Profiling
-    notebooks:
-    - "notebooks/a-[ab]*.py"
-  - name: Notebooks interactifs
-    notebooks:
-    - "notebooks/a-[cx]*.py"
+#- description: "Cours du S2"
+#  id: s2
+#  name: "S2"
+#  sections:
+#  - name: Profiling
+#    notebooks:
+#    - "notebooks/a-[ab]*.py"
+#  - name: Notebooks interactifs
+#    notebooks:
+#    - "notebooks/a-[cx]*.py"
 #   - name: Python asynchrone
 #     notebooks:
 #     - "notebooks/b-*.py"
