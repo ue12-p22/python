@@ -132,10 +132,16 @@ for i in range(len(liste)):
 # %% [markdown]
 # * *rappel*: on peut facilement itérer sur un dictionnaire
 # * mais il faut choisir si on veut le faire 
-#   * sur les clés: `for k in d.keys():`
+#   * sur les clés: simplement `for k in d:`
 #   * sur les valeurs: `for v in d.values():`
 #   * ou sur les deux: `for k, v in d.items():`
 #
+# <div class=note>
+#
+# on peut aussi itérer sur les clés avec `for k in d.keys()`
+#
+#     
+# </div>    
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # #### boucle `for` sur un dictionnaire
@@ -277,7 +283,12 @@ L = [20, 34, 57, 2, 25]
 min(L), sum(L)
 
 # %% cell_style="split"
-list(filter(lambda x: x%2 == 0, L))
+# ceci retourne un itérateur
+map(lambda x: x**2, L)
+
+# %% cell_style="split"
+# pour voir "ce qu'il y a dedans"
+list(map(lambda x: x**2, L))
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### itérateurs
@@ -342,7 +353,7 @@ sys.getsizeof(I)
 # ### `range`
 
 # %% [markdown]
-# * `range` crée un itérateur(*) qui itère sur un intervalle de nombres entiers
+# * `range` crée un objet qui permet d'itèrer sur un intervalle de nombres entiers
 # * arguments : même logique que le slicing
 #   * début (inclus), fin (exclus), pas
 #   * **sauf** (curiosité) : si un seul argument, c'est **la fin**
@@ -357,19 +368,12 @@ for i in range(10, 21, 2):
 for i in range(5):
     print(i, end=" ")
 
-# %% [markdown]
-# <div class="note">
-#
-# (*) en réalité un `range()` n'est pas techniquement un itérateur; mais bon ça y ressemble beaucoup...
-#
-# </div>
-
 # %% [markdown] slideshow={"slide_type": "slide"}
-# ### un `range` n'est **pas une liste**
+# #### un `range` n'est **pas une liste**
 
 # %% [markdown]
 # * l'objet retourné par `range` **n'est pas une liste**
-# * au contraire il crée un objet tout petit, un **itérateur**
+# * au contraire il crée un objet tout petit, un **itérateur** (*)
 # * qui contient seulement la logique de l'itération
 # * la preuve:
 
@@ -385,6 +389,13 @@ for item in iterator:
     if item >= 5:
         break
     print(item, end=" ")
+
+# %% [markdown]
+# <div class="note">
+#
+# (*) en réalité un `range()` n'est pas techniquement un itérateur; mais bon ça y ressemble beaucoup...
+#
+# </div>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # **exercice**: comment créer **une vraie liste** des entiers de 1 à 10 ?
@@ -416,7 +427,7 @@ from itertools import count
 
 for i in count():
     print(i, end=" ")
-    if i >= 5:
+    if i >= 10:
         break
 
 # %% cell_style="split"
@@ -424,7 +435,7 @@ for i in count():
 
 for i in count(2, 5):
     print(i, end=" ")
-    if i >= 12:
+    if i >= 32:
         break
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -478,7 +489,7 @@ with open("data/une-charogne.txt") as feed:
 # ### `zip`
 
 # %% [markdown]
-# `zip` fonctionne un peu comme `enumerate` mais entre plusieurs itérables:
+# `zip` permet d'itérer sur plusieurs itérables "en même temps":
 #
 # ![](media/iter-zip.svg)
 
@@ -502,9 +513,11 @@ for a, b in zip(liste1, liste2):
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### `enumerate = zip + count`
 
+# %% [markdown]
+# aucun intérêt pratique, mais juste une remarque :  
+# on pourrait écrire `enumerate` à base de `zip` et `count`
+
 # %% slideshow={"slide_type": ""}
-# par exemple on peut récrire enumerate
-# à base de zip et count
 L
 
 # %% cell_style="split"
@@ -531,7 +544,7 @@ for index, item in zip(count(), L):
 
 # %% cell_style="split"
 # avec une liste, pas de souci
-L = [1, 2]
+L = [100, 200]
 
 print('pass 1')
 for i in L:
@@ -583,7 +596,11 @@ for a, b in E:
     print(a, b)    
 
 # %% [markdown]
-# **NB** il suffit de faire e.g. `for a, b in enumerate(L)` pour se débarrasser du problème
+# <div class=note>
+#     
+# il suffit bien sûr de faire e.g. `for a, b in enumerate(L)` pour se débarrasser du problème
+#     
+# </div>    
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## le module `itertools` - assemblage d'itérables
@@ -708,7 +725,7 @@ for i, d in zip_longest(
 # ![](media/iter-zip-longest.svg)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# ### `itertools` & combinatoires
+# ## `itertools` & combinatoires
 
 # %% [markdown]
 # Le module `itertools` propose aussi quelques combinatoires usuelles:
@@ -732,11 +749,11 @@ for i, (d1, d2) in enumerate(product(dim1, dim2), 1):
     print(f"i={i}, d1={d1} d2={d2}")
 
 # %% [markdown] slideshow={"slide_type": "slide"}
-# **exercices** (voir notebook séparé)
+# **exercice** (voir notebook séparé)
 #
 # * vigenere
 
-# %% [markdown] slideshow={"slide_type": "slide"} tags=["level_intermediate"]
+# %% [markdown] slideshow={"slide_type": "slide"}
 # ## sous le capot
 
 # %% [markdown]
@@ -756,6 +773,9 @@ iterable = [10, 20, 30]
 #   * jusqu'à obtenir l'exception `StopIteration`
 
 # %% [markdown] slideshow={"slide_type": "slide"}
+# ### `iter()` et `next()`
+
+# %% [markdown] slideshow={"slide_type": ""}
 # voici un équivalent approximatif
 
 # %% cell_style="split" slideshow={"slide_type": ""}
@@ -778,6 +798,14 @@ while True:
         break
 
 
+# %% [markdown]
+# <div class=note>
+#
+# il peut être parfois pratique d'utiliser `iter()` et `next()`  
+# par exemple, comment prendre un élément - n'importe lequel - dans un ensemble ?
+#
+# </div>    
+
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### quel objet est itérable ?
 
@@ -785,12 +813,12 @@ while True:
 # * il existe beaucoup d’objets itérables en python
 #   * tous les objets séquence: listes, tuples, chaînes, etc.
 #   * les sets, les dictionnaires
-#   * les vues (dict.keys(), dict.values()), etc.
+#   * les vues (`dict.keys()`, `dict.values()`), etc.
 #   * les fichiers
 #   * les générateurs
-# * il faut les utiliser, c’est le plus rapide et le plus lisible
+# * il faut **penser à les utiliser**, c’est le plus rapide et le plus lisible
 
-# %% [markdown] slideshow={"slide_type": "slide"}
+# %% [markdown] slideshow={"slide_type": "slide"} tags=["level_intermediate"]
 # ### quel objet est un itérateur ?
 
 # %% [markdown] cell_style="split"
