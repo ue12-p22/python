@@ -44,6 +44,10 @@ tracks:
 # keep temporarily until the videos get embedded
 # some place else
     - notebooks/6-00-intro.py
+    - notebooks/6-01-functions-declaration
+    - notebooks/6-02-functions-arguments
+    - notebooks/6-03-lambdas
+    - notebooks/6-04-variables-scope
 #    - notebooks/6-90-exos.py
 # ???   - tps/queens/README-queens.md
   - name: "divers"

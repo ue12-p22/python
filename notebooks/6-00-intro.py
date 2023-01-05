@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # ---
 # jupyter:
+#   celltoolbar: Edit Metadata
 #   jupytext:
 #     cell_metadata_filter: all,-hidden,-heading_collapsed,-run_control,-trusted
 #     notebook_metadata_filter: all, -jupytext.text_representation.jupytext_version,
@@ -42,16 +43,12 @@ HTML(filename="_static/style.html")
 # %% [markdown]
 # ## objectifs
 #
-# le programme pour aujourd'hui
+# le programme pour cette partie
 #
-# * étudier les objets de type fonction
+# * étudier les objets de type fonction, et notamment
 #   * le passage de paramètre
 #   * les fonctions comme citoyen de niveau 1
-
-# %% [markdown]
-# ## support PDF
-#
-# une [présentation en slides au format pdf](media/les-fonctions.pdf)
+#   * la visibilité des variables  
 
 # %% [markdown]
 # ## vidéos
@@ -68,7 +65,7 @@ parts = (
 # %% [markdown]
 # ***évaluez la cellule suivante*** pour faire apparaitre le sommaire des vidéos, en 4 parties
 
-# %% hide_input=true scrolled=false
+# %% hide_input=false scrolled=false
 from IPython.display import display, HTML, IFrame
 
 def index_as_embedded():
@@ -77,17 +74,3 @@ def index_as_embedded():
         display(IFrame(f"https://www.youtube.com/embed/{stem}", width=800, height=450))
 
 index_as_embedded()
-
-# %% [markdown]
-# ## en version longue
-#
-# pour plus de détails
-#
-# <https://nbhosting.inria.fr/auditor/notebook/python-slides:slides/slides/4-1-functions-arguments>
-
-# %% [markdown]
-# ## les solutions
-#
-# comme toujours dans
-#
-# <https://github.com/ue12-p22/python-solutions>
