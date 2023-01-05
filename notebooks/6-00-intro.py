@@ -34,7 +34,7 @@
 # Licence CC BY-NC-ND, Thierry Parmentelat
 
 # %% [markdown]
-# # fonctions
+# # fonctions : intro en 4 vidéos
 
 # %%
 from IPython.display import HTML
