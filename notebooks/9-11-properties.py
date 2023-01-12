@@ -41,14 +41,16 @@ HTML(filename="_static/style.html")
 # %% [markdown]
 # on a vu qu'en général, une classe expose
 #
-# * des attributs, pour accéder directement aux différents 'morceaux' qui constituent une instance
-# * et des méthodes, qui sont des fonctions
+# * des **attributs**, pour accéder directement aux différents 'morceaux' de **données** qui constituent une instance
+# * et des **méthodes**, qui sont des **fonctions**
 
 # %% [markdown]
 # il arrive qu'on se trouve dans une situation un peu mixte, où on voudrait 
 #
 # * pouvoir accéder aux morceaux de données,
-# * mais **au travers d'une fonction**; qui puisse, par exemple, faire des contrôles sur la validité des valeurs; ou simplement parce que l'accès en question se fait au travers d'une indirection
+# * mais **au travers d'une fonction**  
+#   qui puisse, par exemple, faire des contrôles sur la validité des valeurs  
+#   ou simplement parce que l'accès en question se fait au travers d'une indirection
 
 # %% [markdown]
 # ## exemple 1 : indirection
@@ -90,17 +92,20 @@ class Station:
 
 
 # %% [markdown]
-# mais bien entendu, ça ne fonctionne pas dans l'état, puisque l'attibut `latitude` n'est pas présent dans l'objet `station`
+# mais bien entendu, ça ne fonctionne pas dans l'état, puisque l'attribut `latitude` n'est pas présent dans l'objet `station`
 
 # %%
 # ça ne marche pas !
 # Station(0)
 
 # %% [markdown]
-# ça oblige à écrire plutôt `station.row.latitude` (ou, encore pire, à copier les colonnes de la dataframe sous forme d'attributs - une trè mauvaise idée); mais ça n'est pas du tout pratique, il va falloir se souvenir de cette particularité à chaque fois qu'on aura besoin d'accéder à `latitude`
+# ça oblige à écrire plutôt `station.row.latitude` (ou, encore pire, à copier les colonnes de la dataframe sous forme d'attributs - une très mauvaise idée); mais ça n'est pas du tout pratique, il va falloir se souvenir de cette particularité à chaque fois qu'on aura besoin d'accéder à `latitude`
 
 # %% [markdown]
-# dans ce premier exemple, on peut s'en sortir simplement avec une *property* :
+# c'est l'idée derrière la notion de ***property***: on va créer ici une *property* qui s'appelle `latitude`  
+# ça se présente comme un attribut "normal", mais en fait lorsqu'on accède à cet attribut on le fait au travers de fonctions
+#
+# voici ce que ça donnerait dans ce premier exemple:
 
 # %%
 # maintenant ça fonctionne
@@ -109,10 +114,10 @@ class Station:
     def __init__(self, indice):
         self.row = stations.iloc[indice]
     def __repr__(self):
-        # plus de problème
+        # maintenant plus de problème
         return f"[Station {self.latitude:.2f}]"
     
-    # grâce à cett property, on peut accéder à l'attribut self.latitude
+    # car grâce à cette property, on peut accéder à l'attribut self.latitude
     @property
     def latitude(self):
         return self.row.latitude
@@ -127,7 +132,7 @@ station0
 # ## exemple 2 : une jauge
 
 # %% [markdown]
-# on veut une classe qui manipule une valeur, dont on veut être sûr qu'elle appartient à un intervalle; disons entre 0 et 100
+# deuxième cas d'usage, on veut une classe qui manipule une valeur, mais on veut en plus être sûr qu'elle appartient à un certain intervalle; disons entre 0 et 100
 
 # %% [markdown]
 # sans les properties, on est obligé de définir une méthode `set_value`; comme c'est une fonction, elle va pouvoir faire des contrôles
@@ -154,11 +159,12 @@ Gauge(1000)
 # mais à nouveau ce n'est pas du tout pratique :
 #
 # * d'abord il faut "cacher" l'attribut pour éviter que l'on fasse accidentellement `gauge.value = 1000`
-# * ensuite du coup il faut aussi exposer une autr méthode `self.get_value()` pour lire la valeur
+# * ensuite du coup il faut aussi exposer une autre méthode `self.get_value()` pour lire la valeur
 # * et une fois qu'on a fait tout ça, on se retrouve à devoir écrire un code bavard et pas très lisible, bref c'est super moche
 # * enfin, ça change l'API, et s'il y a déjà du code qui utilise l'attibut `.value` il faut tout changer
 #
-# pour information, cette technique est celle employée dans les langages comme C++ et Java, on appelle ces méthodes des *getters* et *setters*; pas du tout pythonique comme pratique !
+# pour information, cette technique est celle employée dans les langages comme C++ et Java, on appelle ces méthodes des *getters* et *setters*  
+# inutile de dire que ce n'est pas du tout pythonique comme pratique !
 
 # %% [markdown]
 # à nouveau dans cette situtation les properties viennent à la rescousse; voici comment ça se présenterait
@@ -190,13 +196,23 @@ class Gauge:
 # avec ce code, on peut manipuler les objets de la classe "normalement", 
 # et pourtant on contrôle bien la validité de la valeur
 
-# %%
+# %% cell_style="split"
 # à la création
 g = Gauge(1000); g
 
-# %%
+# %% cell_style="split"
 # ou à la modification
 g.value = -10
+g
+
+# %% cell_style="split"
+# etc..
+g.value += 2000
+g
+
+# %% cell_style="split"
+# ...
+g.value *= .5
 g
 
 
@@ -230,14 +246,14 @@ class Gauge:
         self.value = value
         
     def __repr__(self):
-        return f"[Gauge {self._value}]"
+        return f"[Gauge {self.value}]"
 
 
-# %% tags=["level_intermediate"]
+# %% tags=["level_intermediate"] cell_style="split"
 # à la création
 g = Gauge(1000); g
 
-# %% tags=["level_intermediate"]
+# %% tags=["level_intermediate"] cell_style="split"
 # ou à la modification
 g.value = -10
 g
