@@ -56,8 +56,9 @@ HTML(filename="_static/style.html")
 # * la variable `a`
 # * la somme `...+...`
 # * l'indexation `the_index[...]`
-# * l'appel de fonction `my_function(...)`
-# et tous ces fragments de code sont des expressions, comme elles renvoient un résultat on peut les combiner 
+# * l'appel de fonction `my_function(...)`  
+#
+# tous ces fragments de code sont des expressions, et comme elles renvoient un résultat on peut les combiner 
 
 # %% [markdown]
 # ### instructions
@@ -71,7 +72,7 @@ HTML(filename="_static/style.html")
 # %% [markdown]
 # ### la condition `if`
 #
-# petite digression: avant de parler de l'opérateur d'afectation, on peut examiner le cas du `if..then..else`  
+# petite digression: avant de parler de l'opérateur d'affectation, on peut examiner le cas du `if..then..else`  
 # en fait il en existe deux formes en Python:
 #
 # * l'instruction - que vous connaissez tous bien sûr  
@@ -107,6 +108,8 @@ HTML(filename="_static/style.html")
 # %% [markdown]
 # ### le *walrus*
 #
+# fermons la digression, et revenons à notre sujet
+#
 # l'opérateur *walrus* (*a.k.a. *assignment expression*) 
 # est un peu à l'affectation (`a = b`) ce que l'expression conditionnelle est au `if .. else:` 
 #
@@ -129,6 +132,7 @@ c = (a = 10) + (b = 20)
 
 # %%
 # par contre, je peux faire ceci
+# attention d'ailleurs, les parenthèses ici sont toutes nécessaires
 (c := (a := 10) + (b := 20))
 
 # %%
@@ -136,17 +140,20 @@ c = (a = 10) + (b = 20)
 
 # je ne peux pas écrire ceci
 try:
+    # python comprend que j'essaie de passer à print le paramètre a=100
+    # comme quand je fais print(end="")
+    # ce n'est pas du tout ce qu'on essaie de faire !
     print( a = 100 )
 except Exception as exc:
     print(f"OOPS {type(exc)} {exc}")
 
 # %%
-# mais je peux écrire ceci
-print( b:= 100 )
+# mais par contre je peux écrire ceci
+print( a := 100 )
 
 # %%
 # on a affecté b
-b
+a
 
 # %% [markdown]
 # ### cas d'usage
@@ -230,12 +237,13 @@ rest
 
 # %%
 # avec match on peut aussi faire du unpacking
+
 def display(x):
     match x:
         case a, b:
-            print(f"deux {a=} et {b=}")
+            print(f"deux trucs {a=} et {b=}")
         case a, b, *c:
-            print(f"trois {a=}, {b=} et {c=}")
+            print(f"au moins trois trucs {a=}, {b=} et {c=}")
         case _:
             print(f"autre chose {x}")
 
@@ -283,7 +291,7 @@ fact(3)
 # %% [markdown]
 # sachez que c'est bien puissant que ce que j'ai illustré ici, notamment lorsque le sujet du `match` est une instance de classe
 #
-# ces quelques exemples vous donnent seulement un aperçu, au moins vous savez que ça existe et où aller chercher la documentation, , et vous pouvez deviner comment fonctionner un code qui utiliserait cette feature
+# ces quelques exemples vous donnent seulement un aperçu, au moins vous savez que ça existe et où aller chercher la documentation, , et vous pouvez deviner comment fonctionner un code qui utiliserait cette *feature*
 #
 # par contre ce trait date de la version 3.10 qui n'est pas encore forcément disponible partout; aussi je vous recommande, ici encore, d'user de ce trait avec modération, notamment si votre code a besoin d'être déployé prochainement.
 
