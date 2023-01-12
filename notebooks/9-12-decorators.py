@@ -36,7 +36,7 @@ HTML(filename="_static/style.html")
 # %% [markdown]
 # en guise de complément, ce notebook introduit la notion de *decorator*
 
-# %% [markdown]
+# %% [markdown] slideshow={"slide_type": "slide"}
 # ## déjà rencontré
 
 # %% [markdown]
@@ -56,7 +56,7 @@ HTML(filename="_static/style.html")
 # dans cette notation, `staticmethod` est un **décorateur**  
 # nous allons voir ça plus en détail
 
-# %% [markdown]
+# %% [markdown] slideshow={"slide_type": "slide"}
 # ## pourquoi faire ?
 
 # %% [markdown]
@@ -70,8 +70,8 @@ HTML(filename="_static/style.html")
 # * ...
 #
 
-# %% [markdown]
-# ## exemple
+# %% [markdown] slideshow={"slide_type": "slide"}
+# ## principe
 
 # %% [markdown]
 # * un décorateur, c'est donc un bidule qui transforme une fonction en une autre fonction
@@ -79,17 +79,24 @@ HTML(filename="_static/style.html")
 #
 # ![](media/decorator.png)
 
-# %% slideshow={"slide_type": "slide"}
+# %% [markdown] slideshow={"slide_type": "slide"}
+# ## exemple
+
+# %% slideshow={"slide_type": ""}
+# pour débugger une fonction, c'est pratique
+# de pouvoir afficher les arguments et le résultat
+
 def decorator(f):
     def decorated(*args, **kwds):
         print(f"IN {f.__name__}({args=}, {kwds=})")
         result = f(*args, **kwds)
-        print(f"OUT {f.__name__}")
+        print(f"OUT {f.__name__} -> {result}")
         return result
     return decorated        
 
 
 # %% cell_style="split"
+# une fonction au hasard
 def add(x, y):
     """
     la somme
@@ -98,9 +105,35 @@ def add(x, y):
 
 
 # %% cell_style="split"
+# la version décorée
+# affiche les paramètres et le résultat
 add1 = decorator(add)
 
 add1(10, 20)
+
+
+# %% slideshow={"slide_type": "slide"} cell_style="split"
+# on peut appliquer la même recette
+# à n'importe quelle fonction
+# une autre
+def mul(x, y=10):
+    return x * y
+
+
+# %% cell_style="split"
+# la version décorée ... pareil
+mul1 = decorator(mul)
+
+mul1(10, y=20)
+
+
+# %% [markdown]
+# <div class=note>
+#
+# remarquez ici l'usage idiomatique de `*args` et `**kwds`  
+# puisqu'on veut pouvoir faire ça quelque soit la signature de `f`    
+#     
+# </div>    
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## la syntaxe `@truc`
@@ -128,8 +161,63 @@ add1(10, 20)
 #     return x + y
 # ```
 
+# %% [markdown] slideshow={"slide_type": "slide"}
+# ## le module `functools`
+
+# %% [markdown]
+# expose quelques décorateurs d'usage courant
+#
+# <https://docs.python.org/3/library/functools.html>
+
+# %%
+# c'est super inefficace comme façon de faire !
+def fibo(n):
+    return 1 if n <= 1 else fibo(n-1) + fibo(n-2)
+
+
+# %%
+# la preuve
+# %timeit -n 1 -r 1 fibo(30)
+
+# %% cell_style="split"
+# avec ce décorateur, la fonction va retenir les 
+# calculs qu'elle a faits précédemment
+from functools import cache
+
+@cache
+def fibo(n):
+    return 1 if n <= 1 else fibo(n-1) + fibo(n-2)
+
+
+# %% cell_style="split"
+# et du coup ça va plusieurs ordres de grandeur fois plus vite !
+
+# %timeit -n 1 -r 1 fibo(30)
+
+# %% [markdown] slideshow={"slide_type": "slide"}
+# ## conclusion
+#
+# * un décorateur est une fonction qui transforme une fonction en une autre fonction  
+#   (ou encore, une fonction qui transforme une classe en une classe)  
+# * avec la syntaxe  
+#   ```python
+#   @bidule
+#   def ma_fonction(...):
+#       ...
+#   ```
+#   on peut remplacer dans tout le code chaque appel à `ma_fonction` par un appel équivalent à la fonction décorée par `bidule`
+# * sachez aussi que les usages avancés des décorateurs permettent de passer des paramètres ... au décorateur lui-même; un sujet que je vous laisse creuser si vous êtes intéressé
+#   
+# <div class=note>
+#
+# en toute rigueur, on devrait dire qu'un décorateur est un **callable** qui transforme ...  
+# ça signifie qu'on peut aussi implémenter un décorateur .. comme une classe, avec la dunder `__call__`   
+#     
+# </div>    
+#
+
 # %% [markdown] slideshow={"slide_type": "slide"} tags=["level_intermediate"]
-# ## les attributs de fonction
+# ## les attributs de fonction (avancé)
 
 # %% [markdown] tags=["level_intermediate"]
 # * une fonction est un objet Python
@@ -149,7 +237,7 @@ add.__doc__
 # ### préserver les attributs spéciaux
 
 # %% [markdown] tags=["level_intermediate"]
-# notre première implémentation est améliorable car
+# du coup, notre première implémentation est améliorable car
 
 # %% cell_style="split" tags=["level_intermediate"]
 add1.__name__
@@ -162,6 +250,9 @@ add1.__doc__
 
 # %% slideshow={"slide_type": ""} cell_style="split" tags=["level_intermediate"]
 # du coup on pourrait écrire
+# quelque chose comme ceci  
+# (mais voyez le slide suivant 
+# pour la 'bonne' façon de faire)
 
 def decorator2(f):
     def decorated(*args, **kwds):
@@ -182,7 +273,10 @@ add2.__name__, add2.__doc__
 # ### préserver les attributs spéciaux (2)
 
 # %% [markdown] tags=["level_intermediate"]
-# ou encore, la méthode recommandée est d'utiliser .. un décorateur
+# ou encore, la méthode recommandée est d'utiliser .. le décorateur `wraps`  
+# qui va faire tout ce travail pour nous  
+# avec juste une simple ligne en plus par rapport à la version naïve
+#
 
 # %% cell_style="split" tags=["level_intermediate"]
 from functools import wraps
@@ -201,32 +295,3 @@ def decorator3(f):
 add3 = decorator3(add)
 
 add3.__name__, add3.__doc__
-
-
-# %% [markdown] slideshow={"slide_type": "slide"}
-# ## le module `functools`
-
-# %% [markdown]
-# expose quelques décorateurs d'usage courant
-#
-# <https://docs.python.org/3/library/functools.html>
-
-# %%
-def fibo(n):
-    return 1 if n <= 1 else fibo(n-1) + fibo(n-2)
-
-
-# %%
-# %timeit fibo(10)
-
-# %% cell_style="split"
-from functools import cache
-
-@cache
-def fibo(n):
-    return 1 if n <= 1 else fibo(n-1) + fibo(n-2)
-
-# %% cell_style="split"
-# the cached version is 250 x faster 
-
-# %timeit fibo(10)
