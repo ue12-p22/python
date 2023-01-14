@@ -16,8 +16,14 @@ html:
 
 only_build_toc_files: true
 
+exclude_patterns:
+  - "**/.teacher/*"
+
 execute:
   execute_notebooks: cache
+  exclude_patterns:
+    - "**/*-corrige*"
+    - "**/.teacher/*"
 
 parse:
   myst_enable_extensions:
