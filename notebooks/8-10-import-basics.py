@@ -57,14 +57,18 @@ HTML(filename="_static/style.html")
 # je peux l'importer
 import mod
 
-# %% cell_style="center"
+# %% cell_style="split"
 # la variable 'mod' me donne
 # une référence vers un objet module
+mod
+
+# %% cell_style="split"
+# et son type, c'est bien sûr:
 type(mod)
 
 # %% cell_style="split"
 # les noms globaux sont exposés 
-# comme des attributs dand l'objet module
+# comme des attributs dans l'objet module
 ('GLOBALE' in dir(mod)
  and 'spam' in dir(mod))
 
@@ -72,6 +76,13 @@ type(mod)
 # qu'on peut utiliser normalement
 # ici j'appelle la fonction
 mod.spam('good')
+
+# %% [markdown] cell_style="split"
+# <div class=note>
+#
+# remarquez qu'avec cette forme je ne peux pas appeler directement `spam()`, car seule la variable `mod` est définie lors de l'import
+#
+# </div>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## plusieurs formes d'`import`
@@ -81,7 +92,7 @@ mod.spam('good')
 # * on va voir quelques variantes
 #   * pour l'instant pour les modules simples
 #   * i.e. qui correspondent à un fichier
-#   * on verra les packages dans un second temps
+#   * on verra dans un second temps les packages (qui correspondent à un dossier)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### `from module import name`
@@ -98,6 +109,14 @@ spam('direct')
 # * `from mod import spam`
 #   * définit la variable `spam` (et non `mod`)
 #   * plus besoin de la référence au nom du module
+#
+# <div class=note>
+#
+# avec cette forme, la variable `mod` n'est pas définie;  
+# donc on ne **peut pas** appeler `mod.spam()`  
+# il **faut** appeler simplement `spam()`
+#
+# </div>
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ### `import modulename as othername`
