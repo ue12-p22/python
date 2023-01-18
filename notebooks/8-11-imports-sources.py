@@ -30,31 +30,61 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 
 # %% [markdown] slideshow={"slide_type": ""}
-# # Imports et organisation du code
+# # imports et organisation du code
 
 # %% [markdown]
-# ## Modules et packages
+# ## c'est quoi un module ?
 
 # %% [markdown]
-# La notion de ***package*** est une extension de la notion de *module*
+# ### pour quoi faire ?
+
+# %% [markdown]
+# * on peut voir un module comme une boîte à outils
+#   * que `import` permet de **charger dans son espace de travail**
+#
+# * vis-à-vis de l'extérieur  
+#   le module est l'unité de base pour utiliser les librairies
+#   * des centaines de modules dans la **librairie standard** Python
+#   * des (dizaines de) milliers de **librairies tierces** sont disponibles  
+#     → voir PyPI - the Python Package Index  
+#     <https://pypi.org/>
+#
+# * vis-à-vis des internes de l'application  
+#   permet aussi de découper le code en morceaux  
+#   (minimiser les couplages)
+
+# %% [markdown]
+# ### isolation des noms entre les librairies
+
+# %% [markdown]
+# un module, c'est principalement juste **un espace de noms**
+#
+# c'est grâce à ces différents espaces de noms que deux fichiers `foo.py` et `bar.py` 
+# peuvent tous les deux définir la même variable `tutu` sans que ça pose le moindre problème de les utiliser tous les deux dans la même application
+
+# %% [markdown]
+# ### modules et packages
+
+# %% [markdown]
+# la notion de ***package*** est une extension de la notion de *module*
 #
 # * de même qu'un **module** usuel correspond - en général - à un **fichier** .py
 # * le **package** correspond à un **dossier**
 
 # %% [markdown]
-# Et de même qu'un dossier est un cas particulier de fichier, un package est un cas particulier de module.
+# et de même qu'un dossier est un cas particulier de fichier, un package est un cas particulier de module.
 #
-# C'est-à-dire notamment que
+# c'est-à-dire notamment que
 #
 # * **un package est aussi un module**
 # * simplement, alors que dans un module usuel, les **attributs** sont des objets de type code (fonctions et classes typiquement)
 # * dans un package on va trouver des attributs qui sont **aussi des modules**
 
 # %% [markdown]
-# ### Exemple
+# ### exemple
 
 # %% [markdown]
-# Voici un un programme Python réparti sur 3 fichiers, qui ne sont pas dans le même dossier
+# voici un un programme Python réparti sur 3 fichiers, qui ne sont pas dans le même dossier
 #
 # ```
 # ./mainimport.py
@@ -76,20 +106,21 @@ HTML(filename="_static/style.html")
 # %cat folder/bar.py
 
 # %% [markdown]
-# On peut exécuter le programme comme d'habitude
+# on peut exécuter le programme comme d'habitude
 
 # %%
 # avec le ! on fait comme si cette commande était tapée dans le terminal
 # !python mainimport.py
 
 # %% [markdown]
-# Et donc pour bien préciser le vocabulaire, dans `mainimport.py` :
-#
-# * l'objet `folder` dénote un **package**
-# * et `folder.foo` dénote un **module**
+# et donc pour bien préciser le vocabulaire, lorsqu'on fait 
 
 # %%
 import folder.foo
+
+# %% [markdown]
+# * l'objet `folder` dénote un **package**
+# * et `folder.foo` dénote un **module**
 
 # %% cell_style="split"
 # un package est un module
@@ -101,7 +132,7 @@ type(folder)
 type(folder.foo)
 
 # %% [markdown] tags=["level_intermediate"]
-# ###  `__init__.py`
+# ###  `__init__.py` (avancé)
 
 # %% [markdown] tags=["level_intermediate"]
 # Dans ce premier exemple, si je fais simplement
@@ -138,16 +169,13 @@ folder2.function('Hi')
 # `folder2.function`
 
 # %% [markdown]
-# ## Les imports
+# ## les imports
 
 # %% [markdown]
 # Pour résumer rapidement les différentes formes :
 #
 # * `import module`  
 #   définit la variable `module` (qui désigne un objet de type module)
-#   
-# * `import package.module`  
-#   importe le package, et le module, et définit la variable `module` 
 #   
 # * `import module as othername`  
 #   pareil, mais la variable locale qui désigne le module est `othername` et pas `module`
@@ -160,16 +188,36 @@ folder2.function('Hi')
 #   
 # * `from module import att1, att2 as newname`  
 #   on peut importer plusieurs attributs d'un coup
+#
+# * `import package.module`  
+#   importe le package, et le module, et définit la variable `package` dans laquelle se trouve l'attribut `module`
 
 # %% [markdown]
-# Notez aussi, c'est important pour les performances :  
+# ## que fait une importation ?
+
+# %% [markdown]
+# * localiser le dossier/fichier correspondant au module 
+#   * on ne met pas le `.py` du fichier lors d’un import
+# * vérifier si le module est déjà chargé ou non
+# * si non:
+#   * charger le code en mémoire
+#   * i.e. créer l'objet module avec ses attributs
+# * affecter la variable locale 
+
+# %% [markdown]
+# ### les modules sont cachés
+#
+# les modules sont donc **cachés**, et c'est important pour les performances !
 #
 # * c'est relativement coûteux de charger un module
 # * aussi, l'interpréteur se "souvient" des modules déja chargés
 # * et donc on peut importer de manière répétitive sans impact notoire sur les performances
+#     
+# par contre ça peut être pénible en développement; voyez [cette astuce](https://nbhosting.inria.fr/builds/python-exos/python/latest/README.html#note-on-autoreload-in-ipython-or-notebooks) pour configurer IPython et contourner cette difficulté
+# <div>    
 
 # %% [markdown]
-# ## Comment sont cherchés les modules et packages ?
+# ## comment sont cherchés les modules et packages ?
 
 # %% [markdown]
 # Pour faire le plus simple possible, lorsque vous écrivez `import tutu`,
@@ -180,8 +228,9 @@ folder2.function('Hi')
 # * puis à l'endroit où sont installés les `pip install ...`
 
 # %% [markdown]
-# ### Le point d'entrée
-#
+# ### le point d'entrée
+
+# %% [markdown]
 # Le point d'entrée, c'est le fichier que vous passez à l'interpréteur Python; dans l'exemple plus haut avec `mainimport.py`, on lance
 #
 # ```python
@@ -208,7 +257,7 @@ folder2.function('Hi')
 # On va voir ça en détail plus bas dans cet exposé.
 
 # %% [markdown] slideshow={"slide_type": "-"}
-# ## Comment organiser les sources de votre projet Python
+# ## comment organiser les sources de votre projet python
 
 # %% [markdown]
 # Où on va voir que :

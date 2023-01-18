@@ -29,7 +29,7 @@ from IPython.display import HTML
 HTML(filename="_static/style.html")
 
 # %% [markdown]
-# # modules et packages
+# # imports : modules et packages
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## c'est quoi un module ?
@@ -37,14 +37,17 @@ HTML(filename="_static/style.html")
 # %% [markdown]
 # * on peut voir un module comme une boîte à outils
 #   * que `import` permet de **charger dans son espace de travail**
-# * l'unité de base pour utiliser les librairies
+#
+# * vis-à-vis de l'extérieur  
+#   le module est l'unité de base pour utiliser les librairies
 #   * des centaines de modules dans la **librairie standard** Python
 #   * des (dizaines de) milliers de **librairies tierces** sont disponibles  
-#     voir PyPI - the Python Package Index  
+#     → voir PyPI - the Python Package Index  
 #     <https://pypi.org/>
 #
-# * permet aussi de découper le code en morceaux  
-#   minimiser les couplages
+# * vis-à-vis des internes de l'application  
+#   permet aussi de découper le code en morceaux  
+#   (minimiser les couplages)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## importation d’un module

@@ -43,7 +43,6 @@ parts:
   - file: 7-41-exos-generators
 - caption: organisation des sources
   chapters:
-  - file: 8-10-import-basics
   - file: 8-11-imports-sources
 - caption: "avanc\xE9"
   chapters:
