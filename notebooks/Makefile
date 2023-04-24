@@ -8,7 +8,4 @@ include Makefile.norm
 
 include Makefile.toc
 
-book:
-	jupyter-book build .
-
-.PHONY: all book
+include Makefile.book
