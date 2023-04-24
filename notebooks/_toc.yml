@@ -2,50 +2,50 @@ format: jb-book
 parts:
 - caption: un jeu pour commencer
   chapters:
-  - file: 1-01-snake
+  - file: 1-01-snake-nb
   - file: tps/snake/README-snake
 - caption: types de base
   chapters:
-  - file: 2-01-numbers
-  - file: 2-02-containers-1
-  - file: 2-03-strings
-  - file: 2-04-files
-  - file: 2-05-containers-2
-  - file: 2-09-exos
+  - file: 2-01-numbers-nb
+  - file: 2-02-containers-1-nb
+  - file: 2-03-strings-nb
+  - file: 2-04-files-nb
+  - file: 2-05-containers-2-nb
+  - file: 2-09-exos-nb
 - caption: "pr\xE9sentation"
   chapters:
-  - file: 3-11-pep008
+  - file: 3-11-pep008-nb
 - caption: "it\xE9rations"
   chapters:
-  - file: 4-11-iterations-1
-  - file: 4-12-iterations-2
+  - file: 4-11-iterations-1-nb
+  - file: 4-12-iterations-2-nb
 - caption: classes
   chapters:
-  - file: 5-11-classes
-  - file: 5-12-dunder-specials
-  - file: 5-13-inheritance
-  - file: 5-14-class-attributes
+  - file: 5-11-classes-nb
+  - file: 5-12-dunder-specials-nb
+  - file: 5-13-inheritance-nb
+  - file: 5-14-class-attributes-nb
 - caption: fonctions
   chapters:
-  - file: 6-00-intro
-  - file: 6-01-functions-declaration
-  - file: 6-02-functions-arguments
-  - file: 6-03-lambdas
-  - file: 6-04-variables-scope
+  - file: 6-00-intro-nb
+  - file: 6-01-functions-declaration-nb
+  - file: 6-02-functions-arguments-nb
+  - file: 6-03-lambdas-nb
+  - file: 6-04-variables-scope-nb
 - caption: divers
   chapters:
-  - file: 7-10-argparse
-  - file: 7-20-recent-stuff
-  - file: 7-25-enums-dataclasses
-  - file: 7-30-regexps
-  - file: 7-31-exos-regexps
-  - file: 7-40-generators
-  - file: 7-41-exos-generators
+  - file: 7-10-argparse-nb
+  - file: 7-20-recent-stuff-nb
+  - file: 7-25-enums-dataclasses-nb
+  - file: 7-30-regexps-nb
+  - file: 7-31-exos-regexps-nb
+  - file: 7-40-generators-nb
+  - file: 7-41-exos-generators-nb
 - caption: organisation des sources
   chapters:
-  - file: 8-11-imports-sources
+  - file: 8-11-imports-sources-nb
 - caption: "avanc\xE9"
   chapters:
-  - file: 9-11-properties
-  - file: 9-12-decorators
+  - file: 9-11-properties-nb
+  - file: 9-12-decorators-nb
 root: 0-00-intro

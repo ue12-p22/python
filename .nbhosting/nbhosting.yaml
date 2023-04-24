@@ -7,34 +7,34 @@ tracks:
   sections:
   - name: 'un jeu pour commencer'
     notebooks:
-    - notebooks/1-01-snake.py
+    - notebooks/1-01-snake-nb.py
     - notebooks/tps/snake/README-snake.md
   - name: 'types de base'
     notebooks:
-    - notebooks/2-01-numbers.py
-    - notebooks/2-02-containers-1.py
-    - notebooks/2-03-strings.py
-    - notebooks/2-04-files.py
-    - notebooks/2-05-containers-2.py
-    - notebooks/2-09-exos.py
+    - notebooks/2-01-numbers-nb.py
+    - notebooks/2-02-containers-1-nb.py
+    - notebooks/2-03-strings-nb.py
+    - notebooks/2-04-files-nb.py
+    - notebooks/2-05-containers-2-nb.py
+    - notebooks/2-09-exos-nb.py
 # ???    - tps/graphs/README-graphs.md
   - name: "présentation"
     notebooks:
-    - notebooks/3-11-pep008.py
-#    - notebooks/3-90-exos.py
+    - notebooks/3-11-pep008-nb.py
+#    - notebooks/3-90-exos-nb.py
   - name: "it\xE9rations"
     notebooks:
-    - notebooks/4-11-iterations-1.py
-    - notebooks/4-12-iterations-2.py
-#    - notebooks/4-90-exos.py
-#    - notebooks/4-91-exos2.py
+    - notebooks/4-11-iterations-1-nb.py
+    - notebooks/4-12-iterations-2-nb.py
+#    - notebooks/4-90-exos-nb.py
+#    - notebooks/4-91-exos2-nb.py
   - name: "classes"
     notebooks:
-    - notebooks/5-11-classes.py
-    - notebooks/5-12-dunder-specials.py
-    - notebooks/5-13-inheritance.py
-    - notebooks/5-14-class-attributes.py
-#    - notebooks/5-90-exos.py
+    - notebooks/5-11-classes-nb.py
+    - notebooks/5-12-dunder-specials-nb.py
+    - notebooks/5-13-inheritance-nb.py
+    - notebooks/5-14-class-attributes-nb.py
+#    - notebooks/5-90-exos-nb.py
 # ??? - tps/students/README-students.md
 #     - tps/boids/README-boids.md
 #     - tps/auctions/README-auctions.md
@@ -43,30 +43,30 @@ tracks:
     notebooks:
 # keep temporarily until the videos get embedded
 # some place else
-    - notebooks/6-00-intro.py
-    - notebooks/6-01-functions-declaration
-    - notebooks/6-02-functions-arguments
-    - notebooks/6-03-lambdas
-    - notebooks/6-04-variables-scope
-#    - notebooks/6-90-exos.py
+    - notebooks/6-00-intro-nb.py
+    - notebooks/6-01-functions-declaration-nb
+    - notebooks/6-02-functions-arguments-nb
+    - notebooks/6-03-lambdas-nb
+    - notebooks/6-04-variables-scope-nb
+#    - notebooks/6-90-exos-nb.py
 # ???   - tps/queens/README-queens.md
   - name: "divers"
     notebooks:
-    - notebooks/7-10-argparse.py
-    - notebooks/7-20-recent-stuff.py
-    - notebooks/7-25-enums-dataclasses.py
-    - notebooks/7-30-regexps.py
-    - notebooks/7-31-exos-regexps.py
-    - notebooks/7-40-generators.py
-    - notebooks/7-41-exos-generators.py
+    - notebooks/7-10-argparse-nb.py
+    - notebooks/7-20-recent-stuff-nb.py
+    - notebooks/7-25-enums-dataclasses-nb.py
+    - notebooks/7-30-regexps-nb.py
+    - notebooks/7-31-exos-regexps-nb.py
+    - notebooks/7-40-generators-nb.py
+    - notebooks/7-41-exos-generators-nb.py
   - name: "organisation des sources"
     notebooks:
 #    - notebooks/8-10-import-basics.py
-    - notebooks/8-11-imports-sources.py
+    - notebooks/8-11-imports-sources-nb.py
   - name: avancé
     notebooks:
-    - notebooks/9-11-properties.py
-    - notebooks/9-12-decorators.py
+    - notebooks/9-11-properties-nb.py
+    - notebooks/9-12-decorators-nb.py
 # ???    - tps/metro/README-metro.md
 #- description: "Cours du S2"
 #  id: s2
